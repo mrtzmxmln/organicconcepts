@@ -1,190 +1,75 @@
+html {
+    background-color: black;
+    color: white;
+
+    font-family: SFProNormal;
+    overflow-x: hidden;
+}
+
 body {
     min-height: 100vh;
-    width: 100vw;
-    max-width: 100vw;
-    overflow-x: hidden;
-
-    margin: 0;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    color: white;
-    background-color: black;
-
-    font-family: SFProNormal;
+    align-items: center;
 }
 
 .container {
-    width: 95%;
     max-width: 1080px;
+
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.navBar {
-    min-height: 60px;
-    width: 100%;
 
+/* ----- NAVBAR ----- */
+
+.navBar {
     position: fixed;
     top: 0;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    height: 60px;
 
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-.navBar .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.navBar .navLinks {
+.navLogo {
+    border-bottom: 2px solid transparent;
+}
+
+.navLinks {
     display: flex;
     flex-direction: row;
-
-    font-family: SFProLight;
 }
 
-.navBar .navLinks h4 {
-    margin: 10px;
+.navLink {
+    padding-top: 2px;
     padding-bottom: 2px;
+    margin: 5px;
     border-bottom: 2px solid transparent;
-    transition: all 0.5s;
+    transition: 0.5s all ease;
 }
 
-.navBar .navLinks h4:hover {
+.navLink:hover {
     border-bottom: 2px solid white;
 }
 
-.navMenu {
-    margin: 10px;
-    display: none;
+.navLinkActive {
+    border-bottom: 2px solid white;
 }
 
-.navMenu .open {
-    display: block;
+/* ----- CONTENT ----- */
+.content {
+    margin-top: 80px;
 }
-
-.mission {
-    min-width: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-family: SFProBold;
-
-    background-image: url(./img/Festival_Stage.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.showcase {
-    min-height: 90vh;
-    min-width: 100%;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: SFProBold;
-}
-
-.showcase h2 {
-    padding-bottom: 50px;
-}
-
-.cases {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.case {
-    max-width: 300px;
-    height: 340px;
-    padding: 40px 10px 10px 10px;
-    margin: 5px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    border: 2px solid white;
-    border-radius: 20px;
-
-    transition: all 0.2s;
-}
-
-.caseHead {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.case p {
-    padding-left: 10px;
-    padding-right: 10px;
-
-    display: inline;
-
-    font-family: SFProLight;
-    text-align: justify;
-
-}
-
-.case img {
-    width: 100px;
-    height: 100px;
-    filter: invert(1);
-}
-
-.case:hover {
-    box-shadow: rgba(255, 255, 255, 1) 0px 0px 20px;
-}
-
-.quote {
-    min-height: 70vh;
-    min-width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    font-family: SFProBold;
-
-    background-image: url(./img/Festival_Crowd.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.quote .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
 
 /* FONTS */
 @font-face {
@@ -205,7 +90,7 @@ body {
     font-weight: 800;
 }
 
-/* HEADINGS */
-h1 {
-    font-size: 80px;
+/* FORMATS */
+p {
+    margin: 0;
 }
