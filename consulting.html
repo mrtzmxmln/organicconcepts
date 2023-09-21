@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body onload="checkNav()">
 
-    <div class="navBar container">
-        <div class="navLogo">
-            <p>Organic Concpets</p>
+    <div id="NAVBAR" class="navBar">
+
+        <div class="navLogo" onclick="openPage('home')">
+            <p>Organic Concepts</p>
         </div>
 
         <div class="navLinks">
@@ -28,7 +29,13 @@
             <div id="NAVCONSULTING" class="navLink" onclick="openPage('consulting')">
                 <p>Consulting</p>
             </div>
+
+            <div id="NAVEVENTS" class="navLink" onclick="openPage('events')">
+                <p>Events</p>
+            </div>
+
         </div>
+
     </div>
 
     <div class="content container">

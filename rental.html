@@ -8,33 +8,60 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body onload="checkNav()">
 
-    <div class="navBar container">
-        <div class="navLogo">
-            <p>Organic Concpets</p>
-        </div>
+    <div class="navBack">
+        <div id="NAVBAR" class="navBar">
 
-        <div class="navLinks">
-
-            <div id="NAVRENTAL" class="navLink" onclick="openPage('rental')">
-                <p>Rental</p>
+            <div class="navLogo" onclick="openPage('home')">
+                <p>Organic Concepts</p>
             </div>
 
-            <div id="NAVDESIGN" class="navLink" onclick="openPage('design')">
-                <p>Design</p>
+            <div class="navLinks">
+
+                <div id="NAVRENTAL" class="navLink" onclick="openPage('rental')">
+                    <p>Rental</p>
+                </div>
+
+                <div id="NAVDESIGN" class="navLink" onclick="openPage('design')">
+                    <p>Design</p>
+                </div>
+
+                <div id="NAVCONSULTING" class="navLink" onclick="openPage('consulting')">
+                    <p>Consulting</p>
+                </div>
+
+                <div id="NAVEVENTS" class="navLink" onclick="openPage('events')">
+                    <p>Events</p>
+                </div>
+
             </div>
 
-            <div id="NAVCONSULTING" class="navLink" onclick="openPage('consulting')">
-                <p>Consulting</p>
-            </div>
         </div>
     </div>
 
-    <div class="content container">
-        <h1>Rental</h1>
-    </div>
 
+    <section id="RENTAL">
+
+        <div class="firstContent content container">
+
+            <h2>Rental</h2>
+
+            <h1 class="textSizeBig fontLight">EVENT EQUIPMENT</h1>
+            <h1 class="textSizeBig fontLight">MEDIA EQUIPMENT</h1>
+            <h1 class="textSizeBig fontLight">FILM EQUIPMENT</h1>
+
+            <button>
+                <p>Request</p>
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="TEST">
+
+    </section>
 
     <script src="./script.js"></script>
 </body>
