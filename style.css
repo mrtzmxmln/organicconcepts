@@ -28,6 +28,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .navContainer {
@@ -141,6 +145,10 @@ button img {
     max-height: 20px;
     scale: 1.3;
     padding-left: 10px;
+}
+
+button a:link, button a:visited {
+    color: black;
 }
 
 /* FITTINGS */
