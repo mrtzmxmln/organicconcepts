@@ -17,53 +17,95 @@ body{
     max-width: 1080px;
 }
 
+.colorSetA {
+    background-color: white;
+    color: black;
+}
+
+.colorSetB {
+    background-color: black;
+    color: white;
+}
+
+/* LAYOUT */
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexRowBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexRowCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 /* NAV */
 .nav {
     position: fixed;
     top: 0;
 
     width: 100%;
-    height: 80px;
+    min-height: 80px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 }
 
 .navContainer {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+}
+
+.navHeader {
+    width: 100%;
 }
 
 .navLogo {
     width: 100px;
+    min-height: 80px;
     filter: invert(1);
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .navLinkBox {
     height: 100%;
-    display: flex;
-    flex-direction: row;
     padding-right: 20px;
 }
 
 .navLink {
-    margin-left: 30px;
+    margin-left: 20px;
     height: 100%;
-    display: flex;
-    align-items: center;
     font-weight:500;
 }
 
 .navLink span {
-    padding-bottom: 10px;
+    padding-bottom: 2px;
     transition: 0.2s ease-in-out;
 }
 
@@ -72,7 +114,50 @@ body{
     transition: 0.2s ease-in-out;
 }
 
-/* POOL */
+.hamburger {
+    display: none;
+    min-height: 80px;
+    margin-right: 20px;
+}
+
+.hamburgerPatty {
+    height: 4px;
+    width: 32px;
+    background-color: white;
+    border-radius: 1px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .navContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navLink {
+        min-height: 60px;
+        width: 100%;
+        font-size: larger;
+        margin-left: 0;
+    }
+
+    .navLinkBox {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+}
+
+/* POOL  (obsolet?)*/
 .pool {
     display: flex;
     flex-direction: column;
@@ -82,40 +167,68 @@ body{
     min-height: 60vh;
 }
 
-/* DEVELOPMENT */
-.development {
+/* HEADER */
+.header {
     height: 100vh;
     min-height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+}
+
+/* WHATWEDO */
+.whatwedo {
+    width: 100%;
+    height: 80vh;
+    min-height: fit-content;
+}
+
+/* PARTNER */
+.partner {
+    height: 80vh;
+    min-height: fit-content;
+    border-radius: 42px;
+    margin: 20px;
+}
+
+/* TOOLS */
+.tools {
+    height: 80vh;
+}
+
+/* IMPRINT */
+.imprint {
+    height: 100vh;
 }
 
 /* FOOTER*/
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-around;
+    align-items: flex-start;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .footer .card {
-    display:flex;
-    flex-direction: column;
     padding: 20px;
 }
 
-.footer .cardHeading {
-    font-size: 16px;
-    padding-bottom: 10px;
+.footer .card .cardHeading {
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
+.footer .card a {
+    text-decoration: none;
+    width: fit-content;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.footer .card a:hover {
+    box-shadow: 0 2px white;
+    transition: 0.2s ease-in-out;
+}
+
+
 .footer .cardSocial {
-    display: flex;
-    flex-direction:row;
     padding: 20px;
 }
 
@@ -129,10 +242,8 @@ body{
 /* COPYRIGHT */
 .copyright {
     width: 100%;
-    color: gray;
+    color: white;
     font-size: 12px;
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
 }
 
@@ -149,8 +260,6 @@ button {
     display: flex;
     align-items: center;
     border: none;
-    background-color: white;
-    color: black;
     text-decoration: none;
 }
 
@@ -170,6 +279,10 @@ button a:link, button a:visited {
     height: 100%;
 }
 
+.fullWidth {
+    width: 100%;
+}
+
 /* TYPO */
 
 @font-face {
@@ -181,6 +294,11 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
 }
 
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
 a:link, a:visited, a:hover {
     color: gray;
 }
@@ -189,4 +307,16 @@ a:link, a:visited, a:hover {
     color: gray;
     text-align: justify;
     font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    
+    h1 {
+        font-size: 30px;
+    }
+
+    .sub {
+        font-size: 16px;
+    }
+
 }

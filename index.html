@@ -15,66 +15,99 @@
 
 <body>
 
-    <div class="nav">
-        <div class="container navContainer">
-            <div class="navLogo" onclick="openHome()">
-                <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit">
+    <div class="nav flexColumnCenter">
+        <div class="container navContainer flexRow">
+
+            <div class="navHeader flexRowBetween">
+
+                <div class="navLogo flexCenter" onclick="openHome()">
+                    <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit">
+                </div>
+
+                <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
+                    <div>
+                        <div class="hamburgerPatty"></div>
+                        <div class="hamburgerPatty"></div>
+                        <div class="hamburgerPatty"></div>
+                    </div>
+                </div>
+
             </div>
-            <div class="navLinkBox">
-                <div class="navLink" onclick="">
+
+            <div id="NAVLINKBOX" class="navLinkBox flexRowCenter">
+                
+                <div class="navLink flexCenter" onclick="">
                     <span>Pool</span>
                 </div>
-                <div class="navLink">
+
+                <div class="navLink flexCenter">
                     <span>Consulting</span>
                 </div>
-                <div class="navLink">
+
+                <div class="navLink flexCenter">
                     <span>Design</span>
                 </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header flexColumnCenter">
+            <h1>Wir sind dein digitaler Partner.</h1>
+            <span class="sub">Konzepte | Planung | Umsetzung | Analyse | Optimierung</span>
+        </div>
+    </div>
+
+    <div class="fullWidth flexColumnCenter colorSetA">
+        <div class="container">
+            <div class="whatwedo flexColumnCenter">
+                <h1>what we do</h1>
+            </div> 
+        </div>
+    </div>
+
+    <div class="fullWidth flexColumnCenter colorSetA">
+        <div class="container">
+            <div class="partner flexColumnCenter colorSetB">
+                <h1>Partner</h1>
             </div>
         </div>
     </div>
 
-    <div class="container">
-
-        <div class="development">
-
-            <h1>_ CONTENT IN DEVELOPMENT</h1>
-    
-            <span class="sub">
-                Wir arbeiten gerade an unserer neuen Website, damit du besser mit uns interagieren und mehr über uns erfahren kannst. Wenn du über den Launch informiert werden willst, abboniere einfach unseren Newsletter.
-            </span>
-    
-            <button>NEWSLETTER</button>
+    <div class="fullWidth flexColumnCenter colorSetA">
+        <div class="container">
+            <div class="tools flexColumnCenter">
+                <h1>Tools</h1>
+            </div>
         </div>
     </div>
     
     <div class="container">
-
-        <div class="footer">
-
-            <div class="card">
-                <span class="cardHeading">Rechtliches</span>
-                <a href="">Impressum</a>
+        <div class="footer flexRowCenter">
+            <div class="card flexColumn">
+                <span class="cardHeading">
+                    Navigation
+                </span>
+                <a href="./index.html">Startseite</a>
+            </div>
+            <div class="card flexColumn">
+                <span class="cardHeading">
+                    Rechtliches
+                </span>
+                <a href="./imprint.html">Impressum</a>
                 <a href="">Datenschutz</a>
                 <a href="">AGB</a>
             </div>
-
-            <div class="cardSocial">
-                <img src="./img/icons/mail.png" alt="">
-                <img src="./img/icons/github.png" alt="">
-                <img src="./img/icons/instagram.png" alt="">
-            </div>
-
         </div>
-
-        <div class="copyright">
-            <span>Copyright © 2024 Organic Concepts</span>
+        <div class="copyright flexCenter">
+            <span>Copyright © 2025 Organic Concepts</span>
         </div>
-
     </div>
-     
 
     <!-- SCRIPTS -->
     <script src="./script/redirect.js"></script>
+    <script src="./script/animation.js"></script>
 </body>
 </html>

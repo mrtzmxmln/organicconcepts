@@ -6,63 +6,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Organic Concepts - Impressum</title>
+    <title>OC | Impressum</title>
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icons/favicon.ico">
+
 </head>
 
 <body>
-    
-    <div class="centerDiv">
-        <div class="logoDiv" onclick="openHome()">
-            <img class="logo" src="./img/logo/OC_Logo_small.svg" alt="">
+
+    <div class="nav flexColumnCenter">
+        <div class="container navContainer flexRow">
+
+            <div class="navHeader flexRowBetween">
+
+                <div class="navLogo flexCenter" onclick="openHome()">
+                    <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit">
+                </div>
+
+                <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
+                    <div>
+                        <div class="hamburgerPatty"></div>
+                        <div class="hamburgerPatty"></div>
+                        <div class="hamburgerPatty"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="NAVLINKBOX" class="navLinkBox flexRowCenter">
+                
+                <div class="navLink flexCenter" onclick="">
+                    <span>Pool</span>
+                </div>
+
+                <div class="navLink flexCenter">
+                    <span>Consulting</span>
+                </div>
+                
+                <div class="navLink flexCenter">
+                    <span>Design</span>
+                </div>
+
+            </div>
+
         </div>
-        <div class="imprintDiv">
-            <div>
+    </div>
+
+    <div class="fullWidth flexColumnCenter">
+        <div class="container flexColumnCenter">
+            <div class="imprint flexColumnCenter">
                 <h1>Impressum</h1>
-                <p>
-                    nach § 5 TMG
-                </p>
-                <p>
-                    Organic Concepts <br>
-                    Moritz Meyer <br>
-                    Teutonenweg 3 <br>
-                    23558 Lübeck
-                </p>
+                nach § 5 TMG <br>
+                <br>
+                Organic Concepts <br>
+                Moritz Meyer <br>
+                Teutonenweg 3 <br>
+                23558 Lübeck
                 <br>
                 <h3>Kontakt</h3>
-                <p>
-                    <a href="mailto:info@organicconcepts.de">info@organicconcepts.de</a>
-                </p>
+                <a href="mailto:info@organicconcepts.de">info@organicconcepts.de</a>
                 <br>
                 <h3>Umsatzsteuer Informationen</h3>
-                <p>
-                    nach § 27 UStG <br>
-                    <br>
-                    folgt in kürze
-                </p>
+                nach § 27 UStG <br>
+                <br>
+                folgt in kürze
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer flexRowCenter">
+            <div class="card flexColumn">
+                <span class="cardHeading">
+                    Navigation
+                </span>
+                <a href="./index.html">Startseite</a>
+            </div>
+            <div class="card flexColumn">
+                <span class="cardHeading">
+                    Rechtliches
+                </span>
+                <a href="./imprint.html">Impressum</a>
+                <a href="">Datenschutz</a>
+                <a href="">AGB</a>
             </div>
         </div>
-        <div class="footer">
-            <div class="footerCards">
-                <div class="footerCard">
-                    <h3>Rechtliches</h3>
-                    <a href="./imprint.html">Impressum</a>
-                    <a href="./index.html">Datenschutz</a>
-                    <a href="./index.html">AGB</a>
-                </div>
-                <div class="footerCard">
-                    <h3>Socials</h3>
-                    <a href="">Instagram</a>
-                    <a href="">Facebook</a>
-                    <a href="">GitHub</a>
-                </div>
-            </div>  
-            <span class="copyright">Copyright © 2024 Organic Concepts</span>          
+        <div class="copyright flexCenter">
+            <span>Copyright © 2025 Organic Concepts</span>
         </div>
     </div>
     
+    <!-- SCRIPTS -->
     <script src="./script/redirect.js"></script>
+    <script src="./script/animation.js"></script>
 </body>
-
 </html>
