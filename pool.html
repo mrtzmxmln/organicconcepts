@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="nav flexColumnCenter">
+    <div class="nav flexColumnCenterCenter">
         <div class="container navContainer flexRow">
 
             <div class="navHeader flexRowBetween">
@@ -34,9 +34,9 @@
 
             </div>
 
-            <div id="NAVLINKBOX" class="navLinkBox flexRowCenter">
+            <div id="NAVLINKBOX" class="navLinkBox flexRowCenterCenter">
                 
-                <div class="navLink flexCenter" onclick="">
+                <div class="navLink flexCenter" onclick="openPool()">
                     <span>Pool</span>
                 </div>
 
@@ -53,23 +53,63 @@
         </div>
     </div>
 
-    <div class="container">
-        
-        <div class="item">
-            <h2>SOUNDBOKS GO</h2>
-            <img style="max-width: 400px; background-color: white;" src="./img/pool/SOUNDBOKS_GO_FRONT.webp" alt="">
-        </div>
+    <div class="fullWidth flexColumnCenterCenter colorSetA" style="padding-top: 100px;">
+        <div class="container">
 
+            <div class="pool flexRowBetweenCenter wrap">
+                <div>
+                    <span class="sub">aus unserem <a href="./pool.html">Pool</a> kannst du</span>
+                    <h1>Technik mieten</h1>
+                </div>
+                <div>
+                    <img src="./img/pool/pioneer_setup_a.png" alt="" style="max-width: 350px;">
+                </div>
+                
+            </div> 
+
+        </div>
+    </div>
+
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
+        <div class="container poolObjects flexRowAroundCenter wrap">
+            
+            <div class="poolObject flexColumnCenter colorSetB">
+                <div class="poolObjectImage flexCenter">
+                    <img src="./img/pool/soundboks_go.png" alt="">
+                </div>
+                <div class="flexColumnCenterCenter">
+                    <span class="sub">Soundboks</span>
+                    <h2>SOUNDBOKS GO</h2>
+                    <button>Anfragen</button>
+                </div>
+            </div>
+
+            <div class="poolObject flexColumnCenter colorSetB">
+                <div class="poolObjectImage flexCenter">
+                    <img src="./img/pool/pioneer_djm_2000.png" alt="">
+                </div>
+                <div class="flexColumnCenterCenter">
+                    <span class="sub">Pioneer DJ</span>
+                    <h2>DJM 2000</h2>
+                    <button>Anfragen</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <div class="container">
+
         <div class="footer flexRowCenter">
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Navigation
                 </span>
                 <a href="./index.html">Startseite</a>
+                <a href="./pool.html">Pool</a>
             </div>
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Rechtliches
@@ -78,10 +118,17 @@
                 <a href="">Datenschutz</a>
                 <a href="">AGB</a>
             </div>
+
         </div>
-        <div class="copyright flexCenter">
+
+        <div class="copyright flexColumnCenterCenter">
+            <div class="socialIcons flexRow">
+                <img src="./img/icons/instagram.png" alt="" onclick="openInstagram()">
+                <img src="./img/icons/github.png" alt="">
+            </div>
             <span>Copyright © 2025 Organic Concepts</span>
         </div>
+
     </div>
 
     <!-- SCRIPTS -->

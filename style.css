@@ -39,9 +39,48 @@ body{
     flex-direction: column;
 }
 
+.flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexColumnCenterCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexColumnBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .flexRow {
     display: flex;
     flex-direction: row;
+}
+
+.flexRowCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flexRowCenterCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexRowAroundCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .flexRowBetween {
@@ -50,18 +89,15 @@ body{
     justify-content: space-between;
 }
 
-.flexColumnCenter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.flexRowCenter {
+.flexRowBetweenCenter {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 /* NAV */
@@ -157,27 +193,34 @@ body{
     
 }
 
-/* POOL  (obsolet?)*/
-.pool {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    min-height: 60vh;
-}
-
 /* HEADER */
 .header {
     height: 100vh;
-    min-height: fit-content;
 }
 
-/* WHATWEDO */
-.whatwedo {
-    width: 100%;
-    height: 80vh;
-    min-height: fit-content;
+/* POOL */
+.pool {
+    margin: 20px;
+}
+
+.poolObject {
+    border-radius: 20px;
+    margin: 20px;
+    padding: 40px;
+    max-width: 400px;
+}
+
+.poolObjectImage {
+    padding: 20px;
+}
+
+.poolObjectImage img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.poolObjects {
+    margin-bottom: 40px;
 }
 
 /* PARTNER */
@@ -185,7 +228,7 @@ body{
     height: 80vh;
     min-height: fit-content;
     border-radius: 42px;
-    margin: 20px;
+    margin: 10px;
 }
 
 /* TOOLS */
@@ -195,6 +238,7 @@ body{
 
 /* IMPRINT */
 .imprint {
+    margin: 20px;
     height: 100vh;
 }
 
@@ -247,17 +291,22 @@ body{
     margin-bottom: 50px;
 }
 
+.socialIcons {
+    margin-bottom: 20px;
+}
+
+.socialIcons img {
+    padding: 10px;
+    filter: invert(1);
+    max-width: 30px;
+}
+
 /* BUTTONS */
 button {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 15px 20px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    max-width: fit-content;
-    border-radius: 5px;
     display: flex;
+    padding: 15px 20px;
+    max-width: fit-content;
+    border-radius: 10px;
     align-items: center;
     border: none;
     text-decoration: none;
@@ -291,12 +340,15 @@ button a:link, button a:visited {
 }
 
 h1, h2, h3, h4, h5 {
-    font-weight: 500;
 }
 
 h1 {
-    font-size: 42px;
+    margin-top: 0.5em;
     font-weight: 700;
+}
+
+h2 {
+    margin-top: 0.4em;
 }
 
 a:link, a:visited, a:hover {
@@ -306,17 +358,8 @@ a:link, a:visited, a:hover {
 .sub {
     color: gray;
     text-align: justify;
-    font-size: 20px;
 }
 
 @media screen and (max-width: 800px) {
-    
-    h1 {
-        font-size: 30px;
-    }
-
-    .sub {
-        font-size: 16px;
-    }
 
 }

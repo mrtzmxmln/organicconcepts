@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="nav flexColumnCenter">
+    <div class="nav flexColumnCenterCenter">
         <div class="container navContainer flexRow">
 
             <div class="navHeader flexRowBetween">
@@ -34,16 +34,16 @@
 
             </div>
 
-            <div id="NAVLINKBOX" class="navLinkBox flexRowCenter">
+            <div id="NAVLINKBOX" class="navLinkBox flexRowCenterCenter">
                 
-                <div class="navLink flexCenter" onclick="">
+                <div class="navLink flexCenter" onclick="openPool()">
                     <span>Pool</span>
                 </div>
 
                 <div class="navLink flexCenter">
                     <span>Consulting</span>
                 </div>
-                
+
                 <div class="navLink flexCenter">
                     <span>Design</span>
                 </div>
@@ -53,37 +53,46 @@
         </div>
     </div>
 
-    <div class="fullWidth flexColumnCenter">
-        <div class="container flexColumnCenter">
-            <div class="imprint flexColumnCenter">
-                <h1>Impressum</h1>
-                nach § 5 TMG <br>
-                <br>
+    <div class="container">
+        <div class="header imprint flexColumnCenter">
+            <h1>Impressum</h1>
+            <span class="sub">nach nach § 5 TMG</span>
+            <br>
+            <span>
                 Organic Concepts <br>
                 Moritz Meyer <br>
                 Teutonenweg 3 <br>
                 23558 Lübeck
-                <br>
-                <h3>Kontakt</h3>
+            </span>
+            <br>
+            <br>
+            <h4>Kontakt</h4>
+            <span>
                 <a href="mailto:info@organicconcepts.de">info@organicconcepts.de</a>
-                <br>
-                <h3>Umsatzsteuer Informationen</h3>
-                nach § 27 UStG <br>
-                <br>
-                folgt in kürze
-            </div>
-            
+            </span>
+            <br>
+            <br>
+            <h4>Umsatzsteuer Informationen</h4>
+            <span class="sub">nach § 27 UStG</span>
+            <br>
+            <span>
+                folgt in kürze...
+            </span>
         </div>
     </div>
 
     <div class="container">
+
         <div class="footer flexRowCenter">
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Navigation
                 </span>
                 <a href="./index.html">Startseite</a>
+                <a href="./pool.html">Pool</a>
             </div>
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Rechtliches
@@ -92,10 +101,17 @@
                 <a href="">Datenschutz</a>
                 <a href="">AGB</a>
             </div>
+
         </div>
-        <div class="copyright flexCenter">
+
+        <div class="copyright flexColumnCenterCenter">
+            <div class="socialIcons flexRow">
+                <img src="./img/icons/instagram.png" alt="" onclick="openInstagram()">
+                <img src="./img/icons/github.png" alt="">
+            </div>
             <span>Copyright © 2025 Organic Concepts</span>
         </div>
+
     </div>
     
     <!-- SCRIPTS -->

@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="nav flexColumnCenter">
+    <div class="nav flexColumnCenterCenter">
         <div class="container navContainer flexRow">
 
             <div class="navHeader flexRowBetween">
@@ -34,9 +34,9 @@
 
             </div>
 
-            <div id="NAVLINKBOX" class="navLinkBox flexRowCenter">
+            <div id="NAVLINKBOX" class="navLinkBox flexRowCenterCenter">
                 
-                <div class="navLink flexCenter" onclick="">
+                <div class="navLink flexCenter" onclick="openPool()">
                     <span>Pool</span>
                 </div>
 
@@ -54,44 +54,62 @@
     </div>
 
     <div class="container">
-        <div class="header flexColumnCenter">
-            <h1>Wir sind dein digitaler Partner.</h1>
-            <span class="sub">Konzepte | Planung | Umsetzung | Analyse | Optimierung</span>
+        <div class="header flexColumnCenterCenter">
+            <span class="sub">wir sind dein</span>
+            <h1>digitaler Partner</h1>
         </div>
     </div>
 
-    <div class="fullWidth flexColumnCenter colorSetA">
+    <div class="fullWidth flexColumnCenterCenter colorSetA" style="padding-top: 100px;">
         <div class="container">
-            <div class="whatwedo flexColumnCenter">
-                <h1>what we do</h1>
+
+            <div class="pool flexRowBetweenCenter wrap">
+                <div>
+                    <span class="sub">aus unserem <a href="./pool.html">Pool</a> kannst du</span>
+                    <h1>Technik mieten</h1>
+                    <button onclick="openPool()">Pool</button>
+                </div>
+                <div class="felx" style="max-width: 500px;">
+                    <img src="./img/pool/pioneer_setup_a.png" alt="" style="max-width: 100%;">
+                </div>
+                
             </div> 
+
         </div>
     </div>
 
-    <div class="fullWidth flexColumnCenter colorSetA">
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
         <div class="container">
-            <div class="partner flexColumnCenter colorSetB">
-                <h1>Partner</h1>
+            <div class="partner flexColumnCenterCenter colorSetB">
+                <span class="sub">mach doch mal</span>
+                <h1>Konzepte & Projekte</h1>
+                <button>Consulting</button>
             </div>
         </div>
     </div>
 
-    <div class="fullWidth flexColumnCenter colorSetA">
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
         <div class="container">
-            <div class="tools flexColumnCenter">
-                <h1>Tools</h1>
+            <div class="tools flexColumnCenterCenter">
+                <span class="sub">unser Development</span>
+                <h1>dein UI & UX</h1>
+                <button>Design</button>
             </div>
         </div>
     </div>
     
     <div class="container">
+
         <div class="footer flexRowCenter">
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Navigation
                 </span>
                 <a href="./index.html">Startseite</a>
+                <a href="./pool.html">Pool</a>
             </div>
+
             <div class="card flexColumn">
                 <span class="cardHeading">
                     Rechtliches
@@ -100,10 +118,17 @@
                 <a href="">Datenschutz</a>
                 <a href="">AGB</a>
             </div>
+
         </div>
-        <div class="copyright flexCenter">
+
+        <div class="copyright flexColumnCenterCenter">
+            <div class="socialIcons flexRow">
+                <img src="./img/icons/instagram.png" alt="" onclick="openInstagram()">
+                <img src="./img/icons/github.png" alt="">
+            </div>
             <span>Copyright © 2025 Organic Concepts</span>
         </div>
+
     </div>
 
     <!-- SCRIPTS -->
