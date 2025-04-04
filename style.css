@@ -110,6 +110,10 @@ body{
     flex-wrap: wrap;
 }
 
+.flexGrow1 {
+    flex-grow: 1;
+}
+
 /* NAV */
 .nav {
     position: fixed;
