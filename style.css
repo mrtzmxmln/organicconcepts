@@ -22,9 +22,19 @@ body{
     color: black;
 }
 
+.colorSetA button {
+    background-color: black;
+    color: white;
+}
+
 .colorSetB {
     background-color: black;
     color: white;
+}
+
+.colorSetB button {
+    background-color: white;
+    color: black;
 }
 
 /* LAYOUT */
@@ -310,6 +320,9 @@ button {
     align-items: center;
     border: none;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 button img {
