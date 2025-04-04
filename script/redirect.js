@@ -1,5 +1,5 @@
 function openHome() {
-    window.location.href="./index.html"
+    window.location.href="./"
 }
 
 function openPool() {
