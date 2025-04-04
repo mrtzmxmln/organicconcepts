@@ -1,5 +1,5 @@
 function openHome() {
-    window.location.href="./"
+    window.open("https://organicconcepts.de", '_blank').focus();
 }
 
 function openPool() {
