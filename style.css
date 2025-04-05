@@ -208,6 +208,22 @@ body{
     
 }
 
+/* HOME */
+.home::before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    background-image: url("./img/home/home_background.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(10px) grayscale(100%);
+    -webkit-filter: blur(10px) grayscale(100%);
+    opacity: 0.3;
+    transform: scale(1.1);
+}
+
 /* HEADER */
 .header {
     height: 100vh;
