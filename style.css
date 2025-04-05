@@ -235,7 +235,15 @@ body{
 }
 
 .poolImage {
-    max-width: 300px;
+    max-width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .poolImage {
+        max-width: 300px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -274,17 +282,18 @@ body{
     margin-bottom: 40px;
 }
 
-/* PARTNER */
-.partner {
-    height: 80vh;
-    min-height: fit-content;
-    border-radius: 42px;
-    margin: 10px;
+/* CONSULTING */
+.consulting {
+    min-height: 40vh;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 40px;
 }
 
-/* TOOLS */
-.tools {
-    height: 80vh;
+/* DESIGN */
+.design {
+    padding: 40px;
+    margin: 20px;
 }
 
 /* IMPRINT */
