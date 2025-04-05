@@ -12,9 +12,9 @@ function openNav() {
 
 function navDisplay() {
     var w = window.innerWidth;
-    if(w >= 800) {
+    if(w >= 600) {
         navLinkBox.style.display = "flex";
-    } else if (w < 800) {
+    } else if (w < 600) {
         navLinkBox.style.display = "none";
     }
 }
