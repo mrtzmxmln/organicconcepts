@@ -341,6 +341,7 @@ body{
     align-items: flex-start;
     margin-top: 20px;
     margin-bottom: 20px;
+    z-index: 10;
 }
 
 .footer .card {
@@ -436,19 +437,18 @@ button a:link, button a:visited {
 }
 
 h1 {
-    margin-top: 0.5em;
     font-weight: 700;
-}
-
-h2 {
-    margin-top: 0.4em;
 }
 
 a:link, a:visited, a:hover {
     color: gray;
 }
 
-.sub {
+span {
+    text-align: justify;
+}
+
+span .sub {
     color: gray;
     text-align: justify;
 }
