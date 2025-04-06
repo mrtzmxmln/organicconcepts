@@ -328,6 +328,13 @@ body{
     height: 100vh;
 }
 
+/* AGB */
+.agb {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
 /* FOOTER*/
 .footer {
     justify-content:space-around;
