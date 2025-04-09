@@ -342,16 +342,18 @@ body{
     align-items: flex-start;
     margin-top: 20px;
     margin-bottom: 20px;
-    z-index: 10;
+    z-index: 100;
+    font-size: 18px;
 }
 
 .footer .card {
     padding: 20px;
+    font-size: 14px;
 }
 
 .footer .card .cardHeading {
-    font-weight: 600;
     margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .footer .card a {
