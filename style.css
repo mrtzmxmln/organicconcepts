@@ -574,3 +574,31 @@ span .sub {
     cursor: pointer;
     border-radius: 8px;
 }
+
+.cartIcon img {
+    height: 26px;
+    width: 26px;
+    filter: invert(1);
+    cursor: pointer;
+    filter: invert(1);
+}
+
+/* Desktop: Abstand zur rechten Seite */
+@media screen and (min-width: 601px) {
+    .cartIcon {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+/* Mobil: neben Hamburger platzieren */
+@media screen and (max-width: 600px) {
+    .cartIcon {
+        margin-right: 20px;
+        order: 2; /* sicherstellen, dass er rechts steht */
+    }
+
+    .navHeader {
+        flex-direction: row-reverse; /* sorgt dafür, dass Icon ganz rechts steht */
+    }
+}
