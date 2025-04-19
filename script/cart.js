@@ -13,13 +13,6 @@ function addToCart(name, brand = '', image = '') {
     openCart(); // Cart trotzdem öffnen, auch wenn’s schon drin ist
 }
 
-if (!exists) {
-    cartItems.push({ name, brand, image });
-    renderCart();
-  } else {
-    alert(`${name} ist bereits im Warenkorb.`);
-}
-
 function renderCart() {
 const content = document.querySelector('.cart-content');
 content.innerHTML = ''; // Leeren
