@@ -9,3 +9,7 @@ function openPool() {
 function openInstagram() {
     window.open("https://instagram.com/organicconcepts", "_blank").focus();
 }
+
+function openDiscord() {
+    window.open("https://discord.organicconcepts.de", "_blank").focus();
+}
