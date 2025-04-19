@@ -19,11 +19,13 @@
 
         <div class="container navContainer flexRow">
 
-            <div class="navHeader flexRowBetween">
+            <div class="navHeader flexRowBetweenCenter">
         
                 <div class="navLogo flexCenter" onclick="openHome()">
                     <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit">
                 </div>
+
+                
         
                 <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
                     <div>
@@ -47,6 +49,10 @@
         
                 <div class="navLink flexCenter">
                     <span>Design</span>
+                </div>
+
+                <div id="CART" class="navLink flexCenter" onclick="openCart()">
+                    <span>Cart</span>
                 </div>
         
             </div>
@@ -81,7 +87,7 @@
                 <div class="flexColumnCenterCenter">
                     <span class="sub">Soundboks</span>
                     <h2>SOUNDBOKS GO</h2>
-                    <button>anfragen</button>
+                    <button onclick="addToCart('SOUNDBOKS GO', 'Soundboks', './img/pool/soundboks_go.png')">hinzufügen</button>
                 </div>
             </div>
 
@@ -92,7 +98,7 @@
                 <div class="flexColumnCenterCenter">
                     <span class="sub">Pioneer DJ</span>
                     <h2>DJM 2000</h2>
-                    <button>anfragen</button>
+                    <button onclick="addToCart('DJM 2000', 'Pioneer DJ', './img/pool/pioneer_djm_2000.png')">hinzufügen</button>
                 </div>
             </div>
 
@@ -103,19 +109,22 @@
                 <div class="flexColumnCenterCenter">
                     <span class="sub">Allen & Heath</span>
                     <h2>Xone:K2</h2>
-                    <button>anfragen</button>
+                    <button onclick="addToCart('Xone K:2', 'Allen & Heath', './img/pool/xone_k2.png')">hinzufügen</button>
                 </div>
             </div>
 
         </div>
     </div>
 
+    
+    <div id="sidebar"></div>
     <div id="footer" class="container"></div>
     
     <!-- SCRIPTS -->
     <script src="./script/importCode.js"></script>
     <script src="./script/redirect.js"></script>
     <script src="./script/animation.js"></script>
+    <script src="./script/cart.js"></script>
     
 </body>
 </html>

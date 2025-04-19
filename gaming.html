@@ -19,11 +19,13 @@
 
         <div class="container navContainer flexRow">
 
-            <div class="navHeader flexRowBetween">
+            <div class="navHeader flexRowBetweenCenter">
         
                 <div class="navLogo flexCenter" onclick="openHome()">
                     <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit">
                 </div>
+
+                
         
                 <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
                     <div>
@@ -47,6 +49,10 @@
         
                 <div class="navLink flexCenter">
                     <span>Design</span>
+                </div>
+
+                <div id="CART" class="navLink flexCenter" onclick="openCart()">
+                    <span>Cart</span>
                 </div>
         
             </div>
@@ -77,6 +83,7 @@
         </div>
     </div>
 
+    <div id="sidebar"></div>
     <div id="footer" class="container"></div>
     
     <!-- SCRIPTS -->
