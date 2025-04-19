@@ -1,10 +1,19 @@
-const cartItems = [];
+let cartItems = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("cartItems");
+  if (saved) {
+    cartItems = JSON.parse(saved);
+    renderCart();
+  }
+});
 
 function addToCart(name, brand = '', image = '') {
     const exists = cartItems.find(item => item.name === name);
   
     if (!exists) {
         cartItems.push({ name, brand, image });
+        saveCart();
         renderCart();
       } else {
         alert(`${name} ist bereits im Warenkorb.`);
@@ -40,6 +49,7 @@ cartItems.forEach((item, index) => {
 
 function removeFromCart(index) {
 cartItems.splice(index, 1);
+saveCart();
 renderCart();
 }
 
@@ -74,6 +84,7 @@ function submitRequest(event) {
       alert(`Vielen Dank, ${data.vorname}! Deine Anfrage wurde gesendet.`);
       form.reset();
       cartItems.length = 0;
+      saveCart();
       renderCart();
       form.style.display = "none";
     } else {
@@ -84,4 +95,8 @@ function submitRequest(event) {
     console.error("Webhook Fehler:", err);
     alert("Netzwerkfehler – Anfrage konnte nicht gesendet werden.");
   });
+}
+
+function saveCart() {
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
