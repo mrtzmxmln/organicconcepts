@@ -10,4 +10,15 @@
     <div class="cart-content">
         <p>Dein Warenkorb ist leer.</p>
     </div>
+    <div class="cart-footer">
+        <button onclick="showRequestForm()" class="request-btn">Anfrage senden</button>
+      
+        <form id="requestForm" class="request-form" onsubmit="submitRequest(event)">
+          <input type="text" name="vorname" placeholder="Vorname" required>
+          <input type="text" name="nachname" placeholder="Nachname" required>
+          <input type="email" name="email" placeholder="E-Mail" required>
+          <input type="tel" name="telefon" placeholder="Mobilnummer" required>
+          <button type="submit">Absenden</button>
+        </form>
+      </div>
 </div>

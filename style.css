@@ -531,3 +531,46 @@ span .sub {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
 }
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.request-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.request-form {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.request-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.request-form button[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
