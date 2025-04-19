@@ -323,6 +323,12 @@ body{
     margin: 20px;
 }
 
+/* GAMING */
+.gaming {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
 /* IMPRINT */
 .imprint {
     margin: 20px;
@@ -430,6 +436,10 @@ button a:link, button a:visited {
 
 .fullWidth {
     width: 100%;
+}
+
+.fullHeight {
+    height: 100vh;
 }
 
 /* TYPO */
