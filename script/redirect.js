@@ -11,5 +11,5 @@ function openInstagram() {
 }
 
 function openDiscord() {
-    window.open("https://discord.organicconcepts.de", "_blank").focus();
+    window.open("http://discord.organicconcepts.de", "_blank").focus();
 }
