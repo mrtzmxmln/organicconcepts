@@ -1,14 +1,23 @@
 window.addEventListener("resize", navDisplay);
 
-var navLinkBox = document.getElementById("NAVLINKBOX");
-
 function openNav() {
-    if (navLinkBox.style.display === "flex") {
-        navLinkBox.style.display = "none";
+    const navLinkBox = document.getElementById("NAVLINKBOX");
+    if (!navLinkBox) return;
+  
+    navLinkBox.style.display = (navLinkBox.style.display === "flex") ? "none" : "flex";
+  }
+  
+  function navDisplay() {
+    const navLinkBox = document.getElementById("NAVLINKBOX");
+    if (!navLinkBox) return;
+  
+    var w = window.innerWidth;
+    if (w >= 600) {
+      navLinkBox.style.display = "flex";
     } else {
-        navLinkBox.style.display = "flex";
+      navLinkBox.style.display = "none";
     }
-}
+  }
 
 function navDisplay() {
     var w = window.innerWidth;
