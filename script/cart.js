@@ -1,16 +1,16 @@
 let cartItems = [];
 
-// ✅ 1. Beim Laden aus LocalStorage wiederherstellen
+// Beim Laden aus LocalStorage wiederherstellen
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("cartItems");
   if (saved) {
     cartItems = JSON.parse(saved);
   }
-  renderCart(); // nur 1x!
+  renderCart();
 });
 
-function addToCart(name, brand = '', image = '') {
-  const exists = cartItems.find(item => item.name === name);
+function addToCart(name, brand = "", image = "") {
+  const exists = cartItems.find((item) => item.name === name);
 
   if (!exists) {
     cartItems.push({ name, brand, image });
@@ -20,7 +20,7 @@ function addToCart(name, brand = '', image = '') {
     alert(`${name} ist bereits im Warenkorb.`);
   }
 
-  openCart(); // Cart immer öffnen
+  openCart();
 }
 
 function removeFromCart(index) {
@@ -36,6 +36,10 @@ function saveCart() {
 function renderCart() {
   const content = document.querySelector(".cart-content");
   if (!content) return;
+
+  // 👉 Lade aktuelle Daten aus localStorage (damit es IMMER aktuell ist)
+  const saved = localStorage.getItem("cartItems");
+  cartItems = saved ? JSON.parse(saved) : [];
 
   content.innerHTML = "";
 
@@ -60,10 +64,9 @@ function renderCart() {
   });
 }
 
-
 function showRequestForm() {
-  const form = document.getElementById('requestForm');
-  form.style.display = 'flex'; // oder "block"
+  const form = document.getElementById("requestForm");
+  form.style.display = "flex"; // oder "block"
 }
 
 function submitRequest(event) {
@@ -75,34 +78,35 @@ function submitRequest(event) {
     nachname: form.nachname.value,
     email: form.email.value,
     telefon: form.telefon.value,
-    produkte: cartItems.map(item => item.name)
+    produkte: cartItems.map((item) => item.name),
   };
 
-  const webhookUrl = "https://hook.eu2.make.com/ip8pq7pw49npcbaqp99nyi3cxtpr2aw1";
+  const webhookUrl =
+    "https://hook.eu2.make.com/ip8pq7pw49npcbaqp99nyi3cxtpr2aw1";
 
   fetch(webhookUrl, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
-  .then(res => {
-    if (res.ok) {
-      alert(`Vielen Dank, ${data.vorname}! Deine Anfrage wurde gesendet.`);
-      form.reset();
-      cartItems.length = 0;
-      saveCart();
-      renderCart();
-      form.style.display = "none";
-    } else {
-      alert("Fehler beim Senden der Anfrage. Bitte versuche es erneut.");
-    }
-  })
-  .catch(err => {
-    console.error("Webhook Fehler:", err);
-    alert("Netzwerkfehler – Anfrage konnte nicht gesendet werden.");
-  });
+    .then((res) => {
+      if (res.ok) {
+        alert(`Vielen Dank, ${data.vorname}! Deine Anfrage wurde gesendet.`);
+        form.reset();
+        cartItems.length = 0;
+        saveCart();
+        renderCart();
+        form.style.display = "none";
+      } else {
+        alert("Fehler beim Senden der Anfrage. Bitte versuche es erneut.");
+      }
+    })
+    .catch((err) => {
+      console.error("Webhook Fehler:", err);
+      alert("Netzwerkfehler – Anfrage konnte nicht gesendet werden.");
+    });
 }
 
 function saveCart() {
