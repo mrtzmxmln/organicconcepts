@@ -184,6 +184,10 @@ body{
 
 @media screen and (max-width: 600px) {
 
+    .hamburger {
+        display: flex;
+    }
+
     .navContainer {
       flex-direction: column;
       align-items: flex-start;
@@ -193,6 +197,7 @@ body{
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      align-items: center;
     }
   
     .navLinkBox {
@@ -217,6 +222,19 @@ body{
     .cartIcon {
       order: 2;
       margin-right: 20px;
+    }
+
+    .cartIcon img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .navTools {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-right: 20px;
     }
   }
 
