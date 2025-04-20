@@ -62,6 +62,8 @@ function renderCart() {
     `;
     content.appendChild(entry);
   });
+
+  document.getElementById("cart-count").textContent = cartItems.length;
 }
 
 function showRequestForm() {
