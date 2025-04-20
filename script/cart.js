@@ -1,29 +1,36 @@
 let cartItems = [];
 
+// ✅ 1. Beim Laden aus LocalStorage wiederherstellen
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("cartItems");
   if (saved) {
     cartItems = JSON.parse(saved);
-    renderCart();
   }
-
-  renderCart();
+  renderCart(); // nur 1x!
 });
 
-
-
 function addToCart(name, brand = '', image = '') {
-    const exists = cartItems.find(item => item.name === name);
-  
-    if (!exists) {
-        cartItems.push({ name, brand, image });
-        saveCart();
-        renderCart();
-      } else {
-        alert(`${name} ist bereits im Warenkorb.`);
-      }
-  
-    openCart(); // Cart trotzdem öffnen, auch wenn’s schon drin ist
+  const exists = cartItems.find(item => item.name === name);
+
+  if (!exists) {
+    cartItems.push({ name, brand, image });
+    saveCart();
+    renderCart();
+  } else {
+    alert(`${name} ist bereits im Warenkorb.`);
+  }
+
+  openCart(); // Cart immer öffnen
+}
+
+function removeFromCart(index) {
+  cartItems.splice(index, 1);
+  saveCart();
+  renderCart();
+}
+
+function saveCart() {
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
 function renderCart() {
@@ -53,11 +60,6 @@ function renderCart() {
   });
 }
 
-function removeFromCart(index) {
-cartItems.splice(index, 1);
-saveCart();
-renderCart();
-}
 
 function showRequestForm() {
   const form = document.getElementById('requestForm');
