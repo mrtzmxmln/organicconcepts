@@ -64,6 +64,11 @@ function renderCart() {
   });
 
   document.getElementById("cart-count").textContent = cartItems.length;
+
+  const badge = document.getElementById("cart-count");
+  if (badge) {
+    badge.textContent = cartItems.length;
+  }
 }
 
 function showRequestForm() {
