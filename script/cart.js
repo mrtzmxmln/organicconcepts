@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     cartItems = JSON.parse(saved);
     renderCart();
   }
+
+  renderCart();
 });
+
+
 
 function addToCart(name, brand = '', image = '') {
     const exists = cartItems.find(item => item.name === name);
@@ -23,28 +27,30 @@ function addToCart(name, brand = '', image = '') {
 }
 
 function renderCart() {
-const content = document.querySelector('.cart-content');
-content.innerHTML = ''; // Leeren
+  const content = document.querySelector(".cart-content");
+  if (!content) return;
 
-if (cartItems.length === 0) {
-    content.innerHTML = '<p>Dein Warenkorb ist leer.</p>';
+  content.innerHTML = "";
+
+  if (cartItems.length === 0) {
+    content.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
     return;
-}
+  }
 
-cartItems.forEach((item, index) => {
-    const entry = document.createElement('div');
-    entry.className = 'cart-item';
+  cartItems.forEach((item, index) => {
+    const entry = document.createElement("div");
+    entry.className = "cart-item";
     entry.innerHTML = `
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
         <div>
-        <strong>${item.name}</strong><br>
-        <span style="font-size: 14px; color: gray;">${item.brand}</span>
+          <strong>${item.name}</strong><br>
+          <small>${item.brand}</small>
         </div>
-        <button onclick="removeFromCart(${index})" style="font-size: 20px; background: none; border: none; cursor: pointer;">✕</button>
-    </div>
+        <button onclick="removeFromCart(${index})">✕</button>
+      </div>
     `;
     content.appendChild(entry);
-});
+  });
 }
 
 function removeFromCart(index) {
