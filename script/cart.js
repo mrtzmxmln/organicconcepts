@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartItems = JSON.parse(saved);
   }
   renderCart();
+  updateCartBadge();
 });
 
 function addToCart(name, brand = "", image = "") {
@@ -68,6 +69,17 @@ function renderCart() {
   const badge = document.getElementById("cart-count");
   if (badge) {
     badge.textContent = cartItems.length;
+  }
+
+  updateCartBadge();
+}
+
+function updateCartBadge() {
+  const badge = document.getElementById("cart-count");
+  const saved = localStorage.getItem("cartItems");
+  const items = saved ? JSON.parse(saved) : [];
+  if (badge) {
+    badge.textContent = items.length;
   }
 }
 
