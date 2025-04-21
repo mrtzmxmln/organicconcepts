@@ -105,7 +105,7 @@ function submitRequest(event) {
     produkte: cartItems.map((item) => item.name),
   };
 
-  if (!vorname || !nachname || !email || !mobil || !datum) {
+  if (!vorname || !nachname || !email || !mobil || !date) {
     alert("Bitte fülle alle Felder im Formular aus.");
     return;
   }
