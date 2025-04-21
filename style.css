@@ -573,13 +573,14 @@ span .sub {
     }
   
     .navLinkBox {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-      width: 100%;
-      display: none; /* wird per JS eingeblendet */
-      gap: 10px; /* optional: Abstand zwischen Links */
-      margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        padding-left: 20px;
+        width: 100%;
+        display: none; /* wird per JS eingeblendet */
+        gap: 10px; /* optional: Abstand zwischen Links */
+        margin-top: 10px;
     }
   
     .navLink {
