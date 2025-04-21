@@ -84,6 +84,10 @@ function updateCartBadge() {
 }
 
 function showRequestForm() {
+  if (!cartItems || cartItems.length === 0) {
+    alert("Dein Warenkorb ist leer. Bitte wähle mindestens ein Produkt aus.");
+    return;
+  }
   const form = document.getElementById("requestForm");
   form.style.display = "flex"; // oder "block"
 }
@@ -100,6 +104,11 @@ function submitRequest(event) {
     datum: form.date.value,
     produkte: cartItems.map((item) => item.name),
   };
+
+  if (!vorname || !nachname || !email || !mobil || !datum) {
+    alert("Bitte fülle alle Felder im Formular aus.");
+    return;
+  }
 
   const webhookUrl =
     "https://hook.eu2.make.com/ip8pq7pw49npcbaqp99nyi3cxtpr2aw1";
