@@ -105,11 +105,6 @@ function submitRequest(event) {
     produkte: cartItems.map((item) => item.name),
   };
 
-  if (!vorname || !nachname || !email || !mobil || !date) {
-    alert("Bitte fülle alle Felder im Formular aus.");
-    return;
-  }
-
   const webhookUrl =
     "https://hook.eu2.make.com/ip8pq7pw49npcbaqp99nyi3cxtpr2aw1";
 
