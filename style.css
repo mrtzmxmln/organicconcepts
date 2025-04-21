@@ -180,62 +180,6 @@ body{
     margin-bottom: 8px;
 }
 
-@media screen and (max-width: 600px) {
-
-    .hamburger {
-        display: flex;
-    }
-
-    .navContainer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navHeader {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      align-items: center;
-    }
-  
-    .navLinkBox {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-      width: 100%;
-      display: none; /* wird per JS eingeblendet */
-      gap: 10px; /* optional: Abstand zwischen Links */
-      margin-top: 10px;
-    }
-  
-    .navLink {
-      min-height: 60px;
-      width: 100%;
-      font-size: larger;
-      margin-left: 0;
-      padding-left: 20px;
-      justify-content: flex-start;
-    }
-  
-    .cartIcon {
-      order: 2;
-      margin-right: 20px;
-    }
-
-    .cartIcon img {
-        height: 24px;
-        width: 24px;
-    }
-
-    .navTools {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        margin-right: 20px;
-    }
-  }
-
 /* HOME */
 .home {
     overflow: hidden;
@@ -271,55 +215,17 @@ body{
     margin: 20px;
 }
 
-@media screen and (max-width: 600px) {
-
-    .pool {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pool div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-
 .poolImage {
     max-width: 450px;
 }
 
-@media screen and (max-width: 768px) {
-    
-    .poolImage {
-        max-width: 300px;
-    }
 
-}
-
-@media screen and (max-width: 600px) {
-    
-    .poolImage {
-        max-width: 100%;
-    }
-
-}
 
 .poolObject {
     border-radius: 20px;
     margin: 20px;
     padding: 40px;
     max-width: 220px;
-}
-
-@media screen and (max-width: 680px) {
-    
-    .poolObject {
-        max-width: 500px;
-    }
-
 }
 
 .poolObjectImage {
@@ -547,12 +453,6 @@ span .sub {
     overflow-y: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .cart-sidebar {
-        max-width: 100%;
-    }
-}
-
 .cart-item {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
@@ -630,10 +530,102 @@ span .sub {
     cursor: pointer;
 }
 
-/* Mobil: neben Hamburger platzieren */
+/* === VIEWPORT < 768px === */
+@media screen and (max-width: 768px) {
+    
+    .poolImage {
+        max-width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width: 680px) {
+    
+    .poolObject {
+        max-width: 500px;
+    }
+
+}
+
+/* === VIEWPORT < 600px === */
 @media screen and (max-width: 600px) {
+
     .cartIcon {
         margin-right: 20px;
         order: 2; /* sicherstellen, dass er rechts steht */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navContainer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navHeader {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .navLinkBox {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      width: 100%;
+      display: none; /* wird per JS eingeblendet */
+      gap: 10px; /* optional: Abstand zwischen Links */
+      margin-top: 10px;
+    }
+  
+    .navLink {
+      min-height: 60px;
+      width: 100%;
+      font-size: larger;
+      margin-left: 0;
+      padding-left: 20px;
+      justify-content: flex-start;
+    }
+  
+    .cartIcon {
+      order: 2;
+      margin-right: 20px;
+    }
+
+    .cartIcon img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .navTools {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-right: 20px;
+    }
+
+    .pool {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pool div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poolImage {
+        max-width: 100%;
+    }
+
+    .cart-sidebar {
+        max-width: 100%;
     }
 }
