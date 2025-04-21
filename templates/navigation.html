@@ -6,28 +6,29 @@
         <img src="./img/logo/OC_Logo_small.svg" alt="" class="autoFit" />
       </div>
 
-      <div class="navTools flexRow">
-        <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
-          <div>
-            <div class="hamburgerPatty"></div>
-            <div class="hamburgerPatty"></div>
-            <div class="hamburgerPatty"></div>
+      <div class="flexRowCenterCenter">
+        <div id="NAVLINKBOX" class="navLinkBox flexRowCenterCenter">
+          <div class="navLink flexCenter" onclick="openPool()">
+            <span>Pool</span>
+          </div>
+          <div class="navLink flexCenter"><span>Consulting</span></div>
+          <div class="navLink flexCenter"><span>Design</span></div>
+        </div>
+
+        <div class="navTools flexRow">
+          <div class="cartIcon flexCenter" onclick="openCart()">
+            <img src="./img/icons/cart.png" alt="Cart Icon" />
+            <span id="cart-count" class="cart-badge">0</span>
+          </div>
+
+          <div id="HAMBURGER" class="flexCenter hamburger" onclick="openNav()">
+            <div>
+              <div class="hamburgerPatty"></div>
+              <div class="hamburgerPatty"></div>
+              <div class="hamburgerPatty"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="NAVLINKBOX" class="navLinkBox flexRowCenterCenter">
-      <div class="navLink flexCenter" onclick="openPool()">
-        <span>Pool</span>
-      </div>
-      <div class="navLink flexCenter"><span>Consulting</span></div>
-      <div class="navLink flexCenter"><span>Design</span></div>
-
-      <!-- Hier: Cart-Icon -->
-      <div class="navLink cartIcon flexCenter" onclick="openCart()">
-        <img src="./img/icons/cart.png" alt="Cart Icon" />
-        <span id="cart-count" class="cart-badge">0</span>
       </div>
     </div>
   </div>

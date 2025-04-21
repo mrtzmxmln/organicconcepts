@@ -148,7 +148,6 @@ body{
 
 .navLinkBox {
     height: 100%;
-    padding-right: 20px;
 }
 
 .navLink {
@@ -170,7 +169,6 @@ body{
 .hamburger {
     display: none;
     min-height: 80px;
-    margin-right: 20px;
 }
 
 .hamburgerPatty {
@@ -622,6 +620,7 @@ span .sub {
     align-items: center;
     justify-content: center;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .cartIcon img {
@@ -629,14 +628,6 @@ span .sub {
     width: 24px;
     filter: invert(1);
     cursor: pointer;
-}
-
-/* Desktop: Abstand zur rechten Seite */
-@media screen and (min-width: 601px) {
-    .cartIcon {
-        margin-left: 20px;
-        margin-right: 10px;
-    }
 }
 
 /* Mobil: neben Hamburger platzieren */
