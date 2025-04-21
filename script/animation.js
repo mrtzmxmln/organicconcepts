@@ -1,5 +1,16 @@
 window.addEventListener("resize", navDisplay);
 
+window.addEventListener("resize", () => {
+  const navBox = document.getElementById("NAVLINKBOX");
+  if (!navBox) return;
+
+  if (window.innerWidth > 600) {
+    navBox.style.display = "flex";
+  } else {
+    navBox.style.display = "none";
+  }
+});
+
 function openNav() {
   const navLinkBox = document.getElementById("NAVLINKBOX");
   if (!navLinkBox) return;
