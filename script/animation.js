@@ -1,43 +1,24 @@
 window.addEventListener("resize", navDisplay);
 
-window.addEventListener("resize", () => {
-  const navBox = document.getElementById("NAVLINKBOX");
-  if (!navBox) return;
+function navDisplay() {
+  const navDesktop = document.getElementById("NAVLINKBOX-DESKTOP");
+  const navMobile = document.getElementById("NAVLINKBOX-MOBILE");
 
-  if (window.innerWidth > 600) {
-    navBox.style.display = "flex";
+  var w = window.innerWidth;
+  if (w >= 600) {
+    navMobile.style.display = "none";
+    navDesktop.style.display = "flex";
   } else {
-    navBox.style.display = "none";
+    navDesktop.style.display = "none";
   }
-});
+}
 
 function openNav() {
-  const navLinkBox = document.getElementById("NAVLINKBOX");
+  const navLinkBox = document.getElementById("NAVLINKBOX-MOBILE");
   if (!navLinkBox) return;
 
   navLinkBox.style.display =
     navLinkBox.style.display === "flex" ? "none" : "flex";
-}
-
-function navDisplay() {
-  const navLinkBox = document.getElementById("NAVLINKBOX");
-  if (!navLinkBox) return;
-
-  var w = window.innerWidth;
-  if (w >= 600) {
-    navLinkBox.style.display = "flex";
-  } else {
-    navLinkBox.style.display = "none";
-  }
-}
-
-function navDisplay() {
-  var w = window.innerWidth;
-  if (w >= 600) {
-    navLinkBox.style.display = "flex";
-  } else if (w < 600) {
-    navLinkBox.style.display = "none";
-  }
 }
 
 function openCart() {
