@@ -96,7 +96,8 @@ function submitRequest(event) {
     vorname: form.vorname.value,
     nachname: form.nachname.value,
     email: form.email.value,
-    telefon: form.telefon.value,
+    mobil: form.mobil.value,
+    datum: form.date.value,
     produkte: cartItems.map((item) => item.name),
   };
 
