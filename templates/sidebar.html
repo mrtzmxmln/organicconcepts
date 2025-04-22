@@ -11,11 +11,21 @@
     <p>Dein Warenkorb ist leer.</p>
   </div>
   <div class="cart-footer">
-    <button onclick="showRequestForm()" class="request-btn">
+    <button id="requestButton" onclick="showRequestForm()" class="request-btn">
       Anfrage senden
     </button>
 
     <form id="requestForm" class="request-form" onsubmit="submitRequest(event)">
+      <div class="request-header">
+        <h2>Anfrage</h2>
+        <button
+          type="button"
+          class="close-request-form"
+          onclick="closeRequestForm()"
+        >
+          ✕
+        </button>
+      </div>
       <label for="vorname">Vorname:</label>
       <input type="text" name="vorname" placeholder="Vorname" required />
       <label for="nachnmame">Nachname:</label>
@@ -25,7 +35,7 @@
       <label for="mobil">Mobil:</label>
       <input type="tel" name="mobil" placeholder="Mobil" required />
       <label for="date">Datum der Veranstaltung:</label>
-      <input type="date" name="date" placeholder="Datum" required />
+      <input type="date" name="date" id="anfragedatum" required />
       <button type="submit">Absenden</button>
     </form>
   </div>

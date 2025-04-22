@@ -2,10 +2,19 @@ let cartItems = [];
 
 // Beim Laden aus LocalStorage wiederherstellen
 document.addEventListener("DOMContentLoaded", () => {
+  const dateInput = document.getElementById("anfragedatum");
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const isoDate = tomorrow.toISOString().split("T")[0];
+    dateInput.min = isoDate;
+  }
+
   const saved = localStorage.getItem("cartItems");
   if (saved) {
     cartItems = JSON.parse(saved);
   }
+
   renderCart();
   updateCartBadge();
 });
@@ -53,12 +62,13 @@ function renderCart() {
     const entry = document.createElement("div");
     entry.className = "cart-item";
     entry.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <strong>${item.name}</strong><br>
-          <small>${item.brand}</small>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <img src="${item.image}" alt="${item.name}" style="height: 40px; width: 40px; object-fit: cover; border-radius: 6px;" />
+        <div style="flex-grow: 1;">
+          <div style="font-size: 13px; color: gray; font-weight: 500;">${item.brand}</div>
+          <strong>${item.name}</strong>
         </div>
-        <button onclick="removeFromCart(${index})">✕</button>
+        <button onclick="removeFromCart(${index})" style="font-size: 20px; background: none; border: none; cursor: pointer;">✕</button>
       </div>
     `;
     content.appendChild(entry);
@@ -89,7 +99,18 @@ function showRequestForm() {
     return;
   }
   const form = document.getElementById("requestForm");
-  form.style.display = "flex"; // oder "block"
+  const button = document.getElementById("requestButton");
+
+  if (form) form.style.display = "flex";
+  if (button) button.style.display = "none";
+}
+
+function closeRequestForm() {
+  const form = document.getElementById("requestForm");
+  const button = document.getElementById("requestButton");
+
+  if (form) form.style.display = "none";
+  if (button) button.style.display = "block";
 }
 
 function submitRequest(event) {

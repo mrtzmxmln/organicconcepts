@@ -22,10 +22,16 @@ function openNav() {
 }
 
 function openCart() {
-  renderCart(); // 👉 jedes Mal neu rendern
+  renderCart(); // aktualisiere Inhalt
   document.getElementById("cartSidebar").classList.add("active");
   document.getElementById("cartOverlay").classList.add("active");
   document.body.style.overflow = "hidden";
+
+  // ⛔ requestForm ausblenden, falls sichtbar
+  const form = document.getElementById("requestForm");
+  const button = document.getElementById("requestButton");
+  if (form) form.style.display = "none";
+  if (button) button.style.display = "block";
 }
 
 function closeCart() {

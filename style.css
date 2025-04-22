@@ -496,10 +496,17 @@ span .sub {
 
 .request-form {
     display: none;
+    position: fixed;
+    inset: 0; /* ersetzt top, left, right, bottom */
+    background-color: white;
+    color: black;
+    z-index: 200; /* über der Sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
-}
+  }
 
 .request-form input {
     padding: 10px;
@@ -516,6 +523,28 @@ span .sub {
     border: none;
     cursor: pointer;
     border-radius: 8px;
+}
+
+.close-request-form {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.request-header h2 {
+    font-size: 20px;
+    margin: 0;
 }
 
 .cartIcon {
