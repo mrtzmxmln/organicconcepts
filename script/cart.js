@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tomorrow.setDate(tomorrow.getDate() + 1);
     const isoDate = tomorrow.toISOString().split("T")[0];
     dateInput.min = isoDate;
+    dateInput.value = isoDate;
   }
 
   const saved = localStorage.getItem("cartItems");
