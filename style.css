@@ -249,6 +249,16 @@ body{
 /* CONSULTING */
 .consultingHead {
     min-height: 100vh;
+    gap: 20px;
+}
+
+.consultingHead img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.consultingHead h1 {
+    padding: 20px;
 }
 
 .consultingCard {
@@ -655,6 +665,18 @@ span .sub {
         max-width: 300px;
     }
 
+    .consultingHead {
+        padding-top: 100px;
+    }
+
+    .consultingHead h1 {
+        text-align: center;
+    }
+
+    .consultingItems {
+        padding-top: 50px;
+    }
+
 }
 
 
@@ -751,6 +773,10 @@ span .sub {
 
     .cart-sidebar {
         max-width: 100%;
+    }
+
+    .consultingHead img {
+        max-width: 80%;
     }
 
     .consultingCard {
