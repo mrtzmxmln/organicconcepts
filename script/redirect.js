@@ -2,16 +2,16 @@ function openHome() {
   window.location.href = "../";
 }
 
-function openPool() {
-  window.location.href = "../pool/";
-}
-
 function openConsulting() {
   window.location.href = "../consulting/";
 }
 
 function openGaming() {
   window.location.href = "../gaming/";
+}
+
+function openContact() {
+  window.location.href = "../contact/";
 }
 
 function openMail() {
@@ -42,12 +42,4 @@ function openWhatsApp() {
 
 function openGitHub() {
   window.open("https://github.com/mrtzmxmln/organicconcepts", "_blank").focus();
-}
-
-function openLinktree() {
-  window.open("https://linktr.ee/organicconcepts", "_blank").focus();
-}
-
-function openDiscord() {
-  window.open("https://discord.organicconcepts.de", "_blank").focus();
 }

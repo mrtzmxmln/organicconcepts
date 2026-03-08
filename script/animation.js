@@ -20,22 +20,3 @@ function openNav() {
   navLinkBox.style.display =
     navLinkBox.style.display === "flex" ? "none" : "flex";
 }
-
-function openCart() {
-  renderCart(); // aktualisiere Inhalt
-  document.getElementById("cartSidebar").classList.add("active");
-  document.getElementById("cartOverlay").classList.add("active");
-  document.body.style.overflow = "hidden";
-
-  // ⛔ requestForm ausblenden, falls sichtbar
-  const form = document.getElementById("requestForm");
-  const button = document.getElementById("requestButton");
-  if (form) form.style.display = "none";
-  if (button) button.style.display = "block";
-}
-
-function closeCart() {
-  document.getElementById("cartSidebar").classList.remove("active");
-  document.getElementById("cartOverlay").classList.remove("active");
-  document.body.style.overflow = "auto";
-}

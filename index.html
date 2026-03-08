@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- NAV -->
     <div id="navigation" class="flexColumnCenterCenter"></div>
 
-    <!-- Home Header -->
+    <!-- HOME CONSULTING HEAD -->
     <div class="home fullWidth flexColumnCenterCenter">
       <div class="header container flexColumnCenterCenter">
         <span class="sub">wir sind dein</span>
@@ -22,46 +22,145 @@
       </div>
     </div>
 
-    <div
-      class="fullWidth flexColumnCenterCenter colorSetA"
-      style="padding-top: 100px; padding-bottom: 100px"
-    >
-      <!-- Home Pool -->
-      <div class="container">
-        <div class="pool flexRowBetweenCenter wrap">
-          <div>
-            <span class="sub">Aus unserem Pool kannst du</span>
-            <h1>Technik mieten.</h1>
-            <button onclick="openPool()">Pool</button>
-          </div>
-          <div>
-            <img class="poolImage" src="/img/pool/pioneer_setup_a.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Home Consulting -->
+    <!-- HOME CONSULTING SKILLS -->
     <div class="fullWidth flexColumnCenterCenter colorSetA">
-      <div class="container" style="padding-bottom: 100px">
-        <div class="consultingCard flexRowAroundCenter colorSetB">
-          <div class="flexColumnCenterCenter">
-            <span class="sub">Strategisch denken,</span>
-            <h2 style="margin-bottom: 0">digital handeln.</h2>
+      <div class="container">
+        <div class="skills flexColumnCenterCenter">
+          <div class="skillBox fullWidth flexRowAroundCenter wrap">
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/consulting/infrastructure.png"
+                alt=""
+              />
+              <h2>IT Consulting</h2>
+              <p>Infrastruktur, Systeme & Lösungen.</p>
+            </div>
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/consulting/consulting.png"
+                alt=""
+              />
+              <h2>Business Consulting</h2>
+              <p>Prozessoptimierung & digitale Strategien.</p>
+            </div>
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/consulting/automation.png"
+                alt=""
+              />
+              <h2>Automation</h2>
+              <p>Smarte Workflows für mehr Effizienz.</p>
+            </div>
           </div>
-
           <button onclick="openConsulting()">Consulting</button>
         </div>
       </div>
     </div>
 
-    <!-- Home Events -->
+    <!-- HOME EVENTS HEAD -->
     <div class="events fullWidth flexColumnCenterCenter colorSetB">
       <div class="container" style="z-index: 10">
         <div class="flexColumnCenterCenter">
-          <span class="sub">Betritt unsere Welt</span>
-          <h2>avantgardistischer</h2>
-          <button onclick="openEvents()">Events</button>
+          <span class="sub">avantgardistische</span>
+          <h1>Technik & Events</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME EVENTS SKILLS  -->
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
+      <div class="container">
+        <div class="skills flexColumnCenterCenter">
+          <div class="skillBox fullWidth flexRowAroundCenter wrap">
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/events/stage.png"
+                alt=""
+              />
+              <h2>Technik Konzepte</h2>
+              <p>Innovation, Planung & technische Exzellenz.</p>
+            </div>
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/events/tickets.png"
+                alt=""
+              />
+              <h2>Ticket Management</h2>
+              <p>Digitaler Verkauf, Einlass & Gastmanagement.</p>
+            </div>
+            <div class="skill flexColumnCenterCenter">
+              <img
+                style="max-width: 100px"
+                src="./img/events/artist.png"
+                alt=""
+              />
+              <h2>Artist Care</h2>
+              <p>Betreuung, Logistik & Bühnenpräsenz.</p>
+            </div>
+          </div>
+          <button onclick="openEvents()">Technik & Events</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="fullWidth flexColumnCenterCenter colorSetA">
+      <div class="container">
+        <div class="contact flexColumnCenter">
+          <h1>Kontakt</h1>
+          <p>Schreib uns eine Nachricht, wir melden uns zurück!</p>
+          <form id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="vorname"
+                name="vorname"
+                placeholder="Vorname"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="nachname"
+                name="nachname"
+                placeholder="Nachname"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-Mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="mobil"
+                name="mobil"
+                placeholder="Mobilnummer"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Nachricht"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Absenden</button>
+          </form>
         </div>
       </div>
     </div>

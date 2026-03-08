@@ -111,6 +111,10 @@ body{
     flex-wrap: wrap;
 }
 
+.wrapReverse {
+    flex-wrap: wrap-reverse;
+}
+
 .flexGrow1 {
     flex-grow: 1;
 }
@@ -152,6 +156,7 @@ body{
 
 .navLinkBox {
     height: 100%;
+    padding-right: 20px;
 }
 
 .navLink {
@@ -191,7 +196,7 @@ body{
 }
 
 .home::before {
-    height: 100vh;
+    height: 105vh;
     content: "";
     position: absolute;
     top: 0;
@@ -215,86 +220,57 @@ body{
     z-index: 10;
 }
 
-/* POOL */
-.pool {
-    margin: 20px;
-}
-
-.poolImage {
-    max-width: 450px;
-}
-
-
-
-.poolObject {
-    border-radius: 20px;
-    margin: 20px;
-    padding: 40px;
-    max-width: 220px;
-}
-
-.poolObjectImage {
-    padding: 20px;
-}
-
-.poolObjectImage img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.poolObjects {
-    margin-bottom: 40px;
-}
-
 /* CONSULTING */
-.consultingHead {
-    min-height: 100vh;
-    gap: 20px;
+.consulting {
+    padding-top: 100px;
 }
 
-.consultingHead img {
-    max-width: 300px;
-    border-radius: 20px;
-}
-
-.consultingHead h1 {
-    padding: 20px;
-}
-
-.consultingCard {
-    border-radius: 20px;
-    margin: 20px;
+.consultingTextBox {
     padding: 40px;
-    gap: 20px;
 }
 
 .consultingText {
     padding: 20px;
-    max-width: 560px;
-    margin-bottom: 60px;
+    max-width: 600px;
+    text-align: justify;
 }
 
-.consultingItems {
-    padding: 20px;
-    gap: 40px;
+.consulting img {
+    max-width: 200px;
 }
 
-.consultingItem {
-    width: 100%;
+.booking {
+    padding: 80px;
     max-width: 400px;
-    padding: 20px;
-    padding-bottom: 40px;
-    border-radius: 20px;
+    text-align: center;
 }
 
-.consultingCallToAction {
-    margin-top: 100px;
-    margin-bottom: 100px;
+/* SKILLS */
+.skills {
+    padding: 20px;
+    min-height: 40vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.skillBox {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.skill {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.skill p {
+    text-align: center;
 }
 
 /* EVENTS */
 .events {
-    min-height: 60vh;
+    min-height: 80vh;
     overflow: hidden;
     position: relative;
 }
@@ -317,13 +293,38 @@ body{
     margin: 0;
 }
 
-
-
-
 /* GAMING */
 .gaming {
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 100px;
+}
+
+/* CONTACT */
+.contact {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
 }
 
 /* IMPRINT */
@@ -407,15 +408,17 @@ body{
 /* BUTTONS */
 button {
     display: flex;
-    padding: 15px 20px;
+    padding: 15px 25px;
     max-width: fit-content;
     border-radius: 10px;
     align-items: center;
     border: none;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 button img {
@@ -443,7 +446,6 @@ button a:link, button a:visited {
 }
 
 /* TYPO */
-
 @font-face {
     font-family: "Archivo";
     src: url(./font/Archivo-VariableFont_wdth\,wght.ttf);
@@ -466,196 +468,8 @@ span .sub {
     text-align: justify;
 }
 
-/* === CHAT GPT === */
-
-.cart-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0,0,0,0.5);
-    display: none;
-    z-index: 99;
-}
-
-.cart-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    background-color: white;
-    color: black;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-sidebar.active {
-    transform: translateX(0);
-}
-
-.cart-overlay.active {
-    display: block;
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.cart-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.cart-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.cart-content {
-    padding: 20px;
-    flex: 1;
-    overflow-y: auto;
-}
-
-.cart-item {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-}
-
-.cart-footer {
-    padding: 20px;
-    border-top: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 2px 6px;
-    z-index: 10;
-}
-
-.request-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    text-transform: uppercase;
-}
-
-.request-form {
-    display: none;
-    position: fixed;
-    inset: 0; /* ersetzt top, left, right, bottom */
-    background-color: white;
-    color: black;
-    z-index: 200; /* über der Sidebar */
-    padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-sizing: border-box;
-  }
-
-.request-form input {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    display: block;
-    max-width: 100%;
-    margin-top: 5px;
-}
-
-.request-form button[type="submit"] {
-    background-color: black;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.request-form fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.request-form legend {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
-  padding: 0;
-}
-
-.request-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-.close-request-form {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    align-self: flex-end;
-}
-
-.request-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.request-header h2 {
-    font-size: 20px;
-    margin: 0;
-}
-
-.cartIcon {
-    position: relative; /* 🛠 wichtig für korrektes Badge-Positionieren */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.cartIcon img {
-    height: 24px;
-    width: 24px;
-    filter: invert(1);
-    cursor: pointer;
+.alignRight {
+    text-align: right;
 }
 
 /* === VIEWPORT < 768px === */
@@ -697,11 +511,6 @@ span .sub {
 /* === VIEWPORT < 600px === */
 @media screen and (max-width: 600px) {
 
-    .cartIcon {
-        margin-right: 20px;
-        order: 2; /* sicherstellen, dass er rechts steht */
-    }
-
     .hamburger {
         display: flex;
     }
@@ -736,16 +545,6 @@ span .sub {
       padding-left: 20px;
       justify-content: flex-start;
     }
-  
-    .cartIcon {
-      order: 2;
-      margin-right: 20px;
-    }
-
-    .cartIcon img {
-        height: 24px;
-        width: 24px;
-    }
 
     .navTools {
         display: flex;
@@ -768,10 +567,6 @@ span .sub {
     }
 
     .poolImage {
-        max-width: 100%;
-    }
-
-    .cart-sidebar {
         max-width: 100%;
     }
 
