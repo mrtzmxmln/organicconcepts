@@ -156,7 +156,7 @@ body{
 
 .navLinkBox {
     height: 100%;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .navLink {
@@ -226,13 +226,14 @@ body{
 }
 
 .consultingTextBox {
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .consultingText {
     padding: 20px;
     max-width: 600px;
-    text-align: justify;
+    text-align: center;
 }
 
 .consulting img {
@@ -262,6 +263,10 @@ body{
     flex: 1;
     padding: 20px;
     min-width: 300px;
+}
+
+.skill img {
+    max-width: 120px;
 }
 
 .skill p {
@@ -325,6 +330,12 @@ body{
     border-radius: 10px;
     font-size: 16px;
     font-family: inherit;
+}
+
+/* ONBOADRING */
+.onboarding {
+    margin-top: 160px;
+    margin-bottom: 80px;
 }
 
 /* IMPRINT */
@@ -474,23 +485,10 @@ span .sub {
 
 /* === VIEWPORT < 768px === */
 @media screen and (max-width: 768px) {
-    
-    .poolImage {
-        max-width: 300px;
-    }
 
-    .consultingHead {
-        padding-top: 100px;
+    .consulting img {
+        max-width: 120px;
     }
-
-    .consultingHead h1 {
-        text-align: center;
-    }
-
-    .consultingItems {
-        padding-top: 50px;
-    }
-
 }
 
 
