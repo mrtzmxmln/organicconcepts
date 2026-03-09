@@ -218,11 +218,22 @@ body{
 .header {
     height: 100vh;
     z-index: 10;
+    text-align: start;
+}
+
+.headerItem {
+    padding: 20px;
+    max-width: 600px;
+}
+
+.headerItem img {
+    max-width: 400px;
+    border-radius: 20px;
 }
 
 /* CONSULTING */
 .consulting {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .consultingTextBox {
@@ -244,6 +255,10 @@ body{
     padding: 80px;
     max-width: 400px;
     text-align: center;
+}
+
+.consultingHeader {
+    padding-bottom: 80px;
 }
 
 /* SKILLS */
@@ -490,6 +505,10 @@ span .sub {
     .consulting img {
         max-width: 120px;
     }
+
+    .consultingHeader {
+        padding-top: 80px;
+    }
 }
 
 
@@ -551,38 +570,6 @@ span .sub {
         align-items: center;
         gap: 10px;
         margin-right: 20px;
-    }
-
-    .pool {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pool div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .poolImage {
-        max-width: 100%;
-    }
-
-    .consultingHead img {
-        max-width: 80%;
-    }
-
-    .consultingCard {
-        flex-direction: column;
-    }
-
-    .consultingItems {
-        gap: 20px;
-    }
-
-    .consultingItem {
-        max-width: 100%;
     }
 
 }
