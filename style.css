@@ -216,7 +216,7 @@ body{
 
 /* HEADER */
 .header {
-    height: 100vh;
+    min-height: 100vh;
     z-index: 10;
     text-align: start;
 }
@@ -508,6 +508,11 @@ span .sub {
 
     .consultingHeader {
         padding-top: 80px;
+    }
+
+    .headerItem img {
+        max-width: 300px;
+        border-radius: 20px;
     }
 }
 
