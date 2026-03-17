@@ -1,8 +1,9 @@
-// contact.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("onboardingForm");
+  if (!contactForm) return;
+
   const submitBtn = contactForm.querySelector(".submit-btn");
+  if (!submitBtn) return;
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault(); // Verhindert das Neuladen der Seite
