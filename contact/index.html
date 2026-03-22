@@ -6,74 +6,28 @@
 
     <title>OC | Kontakt</title>
 
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" href="/img/icons/favicon.ico" />
+    <link rel="icon" href="/assets/media/icons/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <div id="navigation" class="flexColumnCenterCenter"></div>
+    <div id="nav"></div>
 
-    <div class="fullWidth flexColumnCenterCenter colorSetA">
+    <div class="flexCenter colorSetA viewHeight">
       <div class="container">
-        <div class="contact flexColumnCenter" style="min-height: 60vh">
-          <h1>Kontakt</h1>
-          <form id="contactForm">
-            <div class="form-group">
-              <input
-                type="text"
-                id="vorname"
-                name="vorname"
-                placeholder="Vorname"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                id="nachname"
-                name="nachname"
-                placeholder="Nachname"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="E-Mail"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="tel"
-                id="mobil"
-                name="mobil"
-                placeholder="Mobilnummer"
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Nachricht"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Absenden</button>
-          </form>
-        </div>
+        <div id="contact" class="contact"></div>
       </div>
     </div>
 
-    <div id="footer" class="container"></div>
+    <div id="footer"></div>
 
-    <!-- SCRIPTS -->
-    <script src="/script/importCode.js"></script>
-    <script src="/script/redirect.js"></script>
-    <script src="/script/animation.js"></script>
-    <script src="/script/contact.js"></script>
+    <!-- SCRIPT -->
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/contact.js"></script>
   </body>
 </html>

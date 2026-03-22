@@ -4,30 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>OC | Services</title>
+    <title>OC | Development Services</title>
 
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="icon" href="/img/icons/favicon.ico" />
+    <link rel="icon" href="/assets/media/icons/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <div id="navigation" class="flexColumnCenterCenter"></div>
+    <div id="nav"></div>
 
-    <div class="fullWidth flexColumnCenterCenter colorSetA">
-      <div class="container">
-        <div class="agb flexColumnCenter" style="min-height: 60vh">
-          <h1>Services</h1>
-          <a href="/services/admin/">Admin</a>
-          <a href="/services/automation/">Automation</a>
+    <header class="flexCenter servicesHeader">
+      <div class="container flexColumnAroundCenter textCenter">
+        <h1>Development Services</h1>
+        <h2>Digitale Exzellenz, organisch implementiert.</h2>
+      </div>
+    </header>
+
+    <section class="flexColumnCenterCenter colorSetA">
+      <div class="container flexColumnCenterCenter servicesBox">
+        <div class="flexRowCenterCenter serviceBox wrap">
+          <img src="/assets/media/icons/administration.png" alt="" />
+          <div class="flexColumn serviceBoxText">
+            <h3>Administration</h3>
+            <b>Der digitale Maschinenraum.</b>
+            <p>
+              Wir halten dir den Rücken frei, indem wir die technische
+              Infrastruktur deines Unternehmens betreuen. Von der
+              Benutzerverwaltung bis zur Systempflege sorgen wir dafür, dass
+              deine digitalen Werkzeuge jederzeit stabil, sicher und auf dem
+              neuesten Stand bleiben.
+            </p>
+          </div>
+        </div>
+        <div class="flexRowCenterCenter serviceBox wrap">
+          <img src="/assets/media/icons/automation.png" alt="" />
+          <div class="flexColumn serviceBoxText">
+            <h3>Automation</h3>
+            <b>Effizienz auf Autopilot.</b>
+            <p>
+              Wiederkehrende Aufgaben fressen Zeit – wir geben sie dir zurück.
+              Durch intelligente Workflows und die Vernetzung deiner Tools
+              eliminieren wir manuelle Fehlerquellen und beschleunigen deine
+              Prozesse. Organisches Wachstum braucht Raum für Kreativität, nicht
+              für Fleißarbeit.
+            </p>
+          </div>
+        </div>
+        <div class="flexRowCenterCenter serviceBox wrap">
+          <img src="/assets/media/icons/consulting.png" alt="" />
+          <div class="flexColumn serviceBoxText">
+            <h3>Consulting</h3>
+            <b>Strategie mit Weitblick.</b>
+            <p>
+              Technik ist nur so gut wie die Strategie dahinter. Wir beraten
+              dich ganzheitlich bei der Auswahl und Implementierung deiner
+              Softwaresysteme. Gemeinsam entwickeln wir Konzepte, die nicht nur
+              heute passen, sondern sich flexibel an deine zukünftige
+              Entwicklung anpassen.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+      <button onclick="openCal()" class="colorSetB">Terminbuchung</button>
+    </section>
 
-    <div id="footer" class="container"></div>
+    <div id="footer"></div>
 
-    <!-- SCRIPTS -->
-    <script src="/script/importCode.js"></script>
-    <script src="/script/redirect.js"></script>
-    <script src="/script/animation.js"></script>
+    <!-- SCRIPT -->
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
