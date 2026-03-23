@@ -155,7 +155,7 @@ p {
 }
 
 .viewHeight {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* OBJECTS */
@@ -216,12 +216,12 @@ nav {
 header {
   min-height: 100vh;
   display: flex;
-  padding: 20px;
 }
 
 section {
   display: flex;
-  padding: 40px 20px 40px 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .container {
@@ -419,8 +419,8 @@ a {
 }
 
 .servicesBox img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 180px;
+  max-height: 180px;
 }
 
 .eventsHeader {
