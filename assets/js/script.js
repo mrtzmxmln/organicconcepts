@@ -31,6 +31,12 @@ function openCal() {
   window.open("https://cal.com/oc-moritz/kennenlernen", "_blank").focus();
 }
 
+function openLinkedIn() {
+  window
+    .open("https://www.linkedin.com/company/organicconcepts", "_blank")
+    .focus();
+}
+
 // CODE INJECTS mit Callback-Unterstützung
 async function loadHTML(url, selector, callback) {
   try {

@@ -278,6 +278,11 @@ a {
   font-size: 14px;
 }
 
+.footerBoxes div {
+  min-width: 200px;
+  padding-top: 20px;
+}
+
 .footerBoxes span {
   font-weight: bold;
 }
@@ -294,6 +299,7 @@ a {
 .footerSocial {
   margin: 10px;
   cursor: pointer;
+  display: flex;
 }
 
 .footerSocial img {
