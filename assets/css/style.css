@@ -482,6 +482,10 @@ a {
   width: 100%;
 }
 
+.stripeButton {
+  width: 100%;
+}
+
 .featureTable {
   display: flex;
   width: 100%;

@@ -14,6 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   </head>
   <body>
     <div id="nav"></div>
@@ -25,7 +27,12 @@
           <div class="flexColumn planBox">
             <h3>Professional</h3>
             <p><b>99€</b> pro Monat</p>
-            <button class="colorSetB">coming Soon</button>
+            <!--<button class="colorSetB">coming Soon</button>-->
+            <stripe-buy-button
+              buy-button-id="buy_btn_1TEcjbDDnzgLrGWhL6YaFZg7"
+              publishable-key="pk_live_51NsV9dDDnzgLrGWhXcgvz3aIV2gBJiqk6r1g9qlCcVxp2fwiBJQji5kkCl0zxOO49bb2MO0XSLeMVNi6qeDBCU9b00WEgQf46i"
+            >
+            </stripe-buy-button>
             <p>
               <b>Services</b><br />
               ✔ Partner Portal<br />
@@ -37,7 +44,11 @@
           <div class="flexColumn planBox">
             <h3>Business</h3>
             <p><b>199€</b> pro Monat</p>
-            <button class="colorSetB">coming Soon</button>
+            <stripe-buy-button
+              buy-button-id="buy_btn_1TEdRDDDnzgLrGWhEf3ttxqo"
+              publishable-key="pk_live_51NsV9dDDnzgLrGWhXcgvz3aIV2gBJiqk6r1g9qlCcVxp2fwiBJQji5kkCl0zxOO49bb2MO0XSLeMVNi6qeDBCU9b00WEgQf46i"
+            >
+            </stripe-buy-button>
             <p>
               <b>Services</b><br />
               ✔ Partner Portal<br />
@@ -50,7 +61,11 @@
           <div class="flexColumn planBox">
             <h3>Enterprise</h3>
             <p><b>499€</b> pro Monat</p>
-            <button class="colorSetB">coming Soon</button>
+            <stripe-buy-button
+              buy-button-id="buy_btn_1TEdSUDDnzgLrGWhXRvi2aBG"
+              publishable-key="pk_live_51NsV9dDDnzgLrGWhXcgvz3aIV2gBJiqk6r1g9qlCcVxp2fwiBJQji5kkCl0zxOO49bb2MO0XSLeMVNi6qeDBCU9b00WEgQf46i"
+            >
+            </stripe-buy-button>
             <p>
               <b>Services</b><br />
               ✔ Partner Portal<br />
@@ -65,6 +80,7 @@
       </div>
     </section>
 
+    <!--
     <section class="flexCenter colorSetA">
       <div class="container flexColumn">
         <table class="featureTable">
@@ -83,6 +99,7 @@
         </table>
       </div>
     </section>
+    -->
 
     <div id="footer"></div>
 
