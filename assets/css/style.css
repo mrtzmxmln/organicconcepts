@@ -251,6 +251,10 @@ button {
   justify-content: center;
 }
 
+.buttonBox button {
+  margin: 10px;
+}
+
 a {
   cursor: pointer;
 }
@@ -481,6 +485,10 @@ a {
 .featureTable {
   display: flex;
   width: 100%;
+}
+
+.agb {
+  padding-top: 100px;
 }
 
 @media (max-width: 1024px) {

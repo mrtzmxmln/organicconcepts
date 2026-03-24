@@ -28,7 +28,7 @@ function sendMail() {
 }
 
 function openCal() {
-  window.open("https://cal.com/oc-moritz/kennenlernen", "_blank").focus();
+  window.open("https://cal.com/ocmoritz/kennenlernen", "_blank").focus();
 }
 
 function openLinkedIn() {
