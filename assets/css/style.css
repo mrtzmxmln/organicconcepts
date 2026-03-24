@@ -130,6 +130,12 @@ p {
   align-items: center;
 }
 
+.flexRowAround {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .flexRowAroundCenter {
   display: flex;
   flex-direction: row;
@@ -140,7 +146,7 @@ p {
 .flexRowBetween {
   display: flex;
   flex-direction: row;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .flexRowBetweenCenter {
@@ -234,7 +240,6 @@ section {
 button {
   display: flex;
   padding: 15px 25px;
-  max-width: fit-content;
   border-radius: 10px;
   align-items: center;
   border: none;
@@ -243,6 +248,7 @@ button {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  justify-content: center;
 }
 
 a {
@@ -455,6 +461,34 @@ a {
   z-index: 10;
 }
 
+.planBoxes {
+  column-gap: 10px;
+  row-gap: 20px
+}
+
+.planBox {
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.planBox button {
+  width: 100%;
+}
+
+.featureTable {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .planBoxes {
+    justify-content: space-around;
+  }
+}
+
 /* Mobile Media Query */
 @media (max-width: 768px) {
   .burgerMenu {
@@ -483,5 +517,9 @@ a {
     width: 100%;
     text-align: center;
     padding: 15px;
+  }
+
+  .planBox {
+    max-width: 100%;
   }
 }
