@@ -187,6 +187,12 @@ nav {
   cursor: pointer;
 }
 
+.navButton {
+  padding: 8px 16px 8px 16px;
+  border-radius: 10px;
+  text-transform: none;
+}
+
 /* BURGER MENÜ */
 .burgerMenu {
   display: none;
@@ -496,6 +502,10 @@ a {
   padding-top: 100px;
 }
 
+.privacy {
+  padding-top: 100px;
+}
+
 @media (max-width: 1024px) {
   .planBoxes {
     justify-content: space-around;
@@ -530,6 +540,10 @@ a {
     width: 100%;
     text-align: center;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
   }
 
   .planBox {
