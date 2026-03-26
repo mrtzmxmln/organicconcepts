@@ -78,6 +78,38 @@
 
     <div id="footer"></div>
 
+    <div id="custom-cookie-banner" class="cookie-hidden">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h3>Cookie-Einstellungen</h3>
+          <p>
+            Wir nutzen Cookies, um dein Erlebnis zu verbessern. Details findest
+            du in unserer <a href="/privacy">Datenschutzerklärung</a>.
+          </p>
+        </div>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="btn-accept">
+            Alle akzeptieren
+          </button>
+          <button onclick="rejectCookies()" class="btn-reject">
+            Nur notwendige
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="cookie-settings-trigger"
+      onclick="showCookieBanner()"
+      title="Cookie-Einstellungen ändern"
+    >
+      <img
+        src="/assets/media/icons/administration.png"
+        alt="Cookies"
+        style="width: 20px; filter: invert(1)"
+      />
+    </button>
+
     <!-- SCRIPT -->
     <script src="/assets/js/script.js"></script>
   </body>

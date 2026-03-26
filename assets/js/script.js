@@ -94,3 +94,30 @@ function initBurgerMenu() {
 loadHTML("/assets/html/nav.html", "#nav", initBurgerMenu);
 loadHTML("/assets/html/contact.html", "#contact");
 loadHTML("/assets/html/footer.html", "#footer");
+
+// COOKIE
+document.addEventListener("DOMContentLoaded", function () {
+  // Prüfen, ob der User schon gewählt hat
+  if (!localStorage.getItem("cookieConsent")) {
+    document
+      .getElementById("custom-cookie-banner")
+      .classList.remove("cookie-hidden");
+  }
+});
+
+function acceptCookies() {
+  localStorage.setItem("cookieConsent", "all");
+  document
+    .getElementById("custom-cookie-banner")
+    .classList.add("cookie-hidden");
+  console.log("Alle Cookies akzeptiert");
+  // Hier könntest du GTAG oder ähnliches laden
+}
+
+function rejectCookies() {
+  localStorage.setItem("cookieConsent", "necessary");
+  document
+    .getElementById("custom-cookie-banner")
+    .classList.add("cookie-hidden");
+  console.log("Nur notwendige Cookies akzeptiert");
+}
