@@ -43,7 +43,8 @@ html, body {
 }
 
 body.menu-open main, 
-body.menu-open section, 
+body.menu-open section,
+body.menu-open #footer,
 body.menu-open header {
   filter: blur(10px); /* Blur auf den Content-Elementen */
   transition: filter 0.3s ease;
@@ -557,7 +558,7 @@ a {
     backdrop-filter: blur(15px); 
     -webkit-backdrop-filter: blur(15px); /* Wichtig für Safari/iOS */
     
-    z-index: 99;
+    z-index: 500;
     overflow-y: auto; /* Falls die Links länger als das Display sind */
   }
 
