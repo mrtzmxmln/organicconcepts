@@ -96,37 +96,58 @@ loadHTML("/assets/html/contact.html", "#contact");
 loadHTML("/assets/html/footer.html", "#footer");
 loadHTML("/assets/html/cookies.html", "#cookies");
 
-// COOKIE BANNER
 // COOKIE BANNER LOGIK
 document.addEventListener("DOMContentLoaded", function () {
-  // Prüfen, ob der User schon gewählt hat
   if (!localStorage.getItem("cookieConsent")) {
     showCookieBanner();
   }
 });
 
+function updateConsentStatusText() {
+  const statusElement = document.getElementById("current-consent-display");
+  if (!statusElement) return;
+
+  const currentConsent = localStorage.getItem("cookieConsent");
+
+  if (currentConsent === "all") {
+    statusElement.innerText = "Alle akzeptiert";
+    statusElement.style.color = "#4CAF50"; // Grün
+  } else if (currentConsent === "necessary") {
+    statusElement.innerText = "Nur notwendige";
+    statusElement.style.color = "#FFC107"; // Gelb/Orange
+  } else {
+    statusElement.innerText = "Noch keine Auswahl";
+    statusElement.style.color = "#fff";
+  }
+}
+
 function showCookieBanner() {
-  document
-    .getElementById("custom-cookie-banner")
-    .classList.remove("cookie-hidden");
-  document.body.classList.add("cookie-banner-active"); // CSS-Klasse für Body
+  const banner = document.getElementById("custom-cookie-banner");
+  if (banner) {
+    banner.classList.remove("cookie-hidden");
+    document.body.classList.add("cookie-banner-active");
+    updateConsentStatusText(); // Text beim Öffnen aktualisieren
+  }
 }
 
 function hideCookieBanner() {
-  document
-    .getElementById("custom-cookie-banner")
-    .classList.add("cookie-hidden");
-  document.body.classList.remove("cookie-banner-active");
+  const banner = document.getElementById("custom-cookie-banner");
+  if (banner) {
+    banner.classList.add("cookie-hidden");
+    document.body.classList.remove("cookie-banner-active");
+  }
 }
 
 function acceptCookies() {
   localStorage.setItem("cookieConsent", "all");
-  hideCookieBanner();
+  updateConsentStatusText(); // Sofortiges Feedback
+  setTimeout(hideCookieBanner, 500); // Kurz warten, damit man die Änderung sieht
   console.log("Alle Cookies akzeptiert");
 }
 
 function rejectCookies() {
   localStorage.setItem("cookieConsent", "necessary");
-  hideCookieBanner();
+  updateConsentStatusText(); // Sofortiges Feedback
+  setTimeout(hideCookieBanner, 500); // Kurz warten
   console.log("Nur notwendige Cookies akzeptiert");
 }

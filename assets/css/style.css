@@ -657,7 +657,7 @@ a {
 #cookie-settings-trigger img {
   width: 22px;
   height: 22px;
-  filter: invert(1); /* Macht das Icon weiß auf dunklem Grund */
+  filter: invert(1); /* Wichtig, falls das Icon schwarz ist */
 }
 
 /* Versteckt das Icon, wenn das Banner bereits offen ist */
