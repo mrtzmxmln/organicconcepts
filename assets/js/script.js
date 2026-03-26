@@ -77,6 +77,8 @@ function initBurgerMenu() {
 
     // Animation für das Burger-Icon (X-Form)
     burger.classList.toggle("toggle");
+
+    document.body.classList.toggle("menu-open");
   });
 
   // Schließen, wenn ein Link geklickt wird

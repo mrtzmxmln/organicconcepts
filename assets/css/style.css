@@ -42,6 +42,13 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.menu-open main, 
+body.menu-open section, 
+body.menu-open header {
+  filter: blur(10px); /* Blur auf den Content-Elementen */
+  transition: filter 0.3s ease;
+}
+
 /* Überschriften */
 h1 {
   font-size: var(--step-5);
@@ -198,7 +205,7 @@ nav {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 101;
+  z-index: 200;
 }
 
 .burgerMenu span {
@@ -530,9 +537,28 @@ a {
     -webkit-backdrop-filter: blur(10px);
   }
 
+  .navLinks button {
+    background-color: var(--colorA);
+    color: var(--colorB) !important; /* Erzwingt Weiß (oder deine Variable) */
+    -webkit-appearance: none; /* Deaktiviert das Standard-iOS-Button-Styling */
+  }
+
   /* Diese Klasse wird per JS hinzugefügt */
   .navLinks.active {
     display: flex;
+    position: fixed;
+    top: 80px; /* Höhe der Navbar */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 80px); /* Restliche Bildschirmhöhe */
+    
+    /* Der entscheidende Teil: */
+    background: rgba(0, 0, 0, 0.4); /* Leichte Abdunkelung */
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); /* Wichtig für Safari/iOS */
+    
+    z-index: 99;
+    overflow-y: auto; /* Falls die Links länger als das Display sind */
   }
 
   .navLink {
@@ -644,7 +670,7 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 200;
   transition: transform 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
