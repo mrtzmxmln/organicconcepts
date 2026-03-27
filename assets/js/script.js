@@ -15,6 +15,10 @@ function openPlans() {
   window.location.href = "/plans";
 }
 
+function openContact() {
+  window.location.href = "/contact";
+}
+
 function openWhatsApp() {
   window.open("https://wa.me/491735169012", "_blank").focus();
 }
