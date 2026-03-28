@@ -45,6 +45,24 @@ function openLinkedIn() {
     .focus();
 }
 
+function bookProfessional() {
+  window
+    .open("https://pay.organicconcepts.de/b/28E7sL06b2QR8Zl3gI1VK00", "_blank")
+    .focus();
+}
+
+function bookBusiness() {
+  window
+    .open("https://pay.organicconcepts.de/b/cNi7sL3in633b7t7wY1VK01", "_blank")
+    .focus();
+}
+
+function bookEnterprise() {
+  window
+    .open("https://pay.organicconcepts.de/b/28E9ATf159ff6RddVm1VK02", "_blank")
+    .focus();
+}
+
 // CODE INJECTS mit Callback-Unterstützung
 async function loadHTML(url, selector, callback) {
   try {
