@@ -214,10 +214,14 @@ nav {
   max-height: 30px;
 }
 
-
 .navLink {
   padding: 20px 0 20px 20px;
   cursor: pointer;
+}
+
+.navButton {
+  background-color: transparent;
+  border: 2px var(--colorB) solid;
 }
 
 /* BURGER MENÜ */
@@ -556,12 +560,6 @@ a {
     padding: 20px 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-  }
-
-  .navLinks button {
-    background-color: var(--colorA);
-    color: var(--colorB) !important; /* Erzwingt Weiß (oder deine Variable) */
-    -webkit-appearance: none; /* Deaktiviert das Standard-iOS-Button-Styling */
   }
 
   /* Diese Klasse wird per JS hinzugefügt */
