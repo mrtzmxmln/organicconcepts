@@ -537,6 +537,21 @@ a {
   padding-top: 100px;
 }
 
+.partnerTools {
+  row-gap: 20px;
+}
+
+.partnerToolBox {
+  padding: 20px;
+  width: 200px;
+}
+
+.partnerToolBox img {
+  max-width: 100%;
+  max-height: 80px;
+  filter: grayscale(1);
+}
+
 @media (max-width: 1024px) {
   .planBoxes {
     justify-content: space-around;
