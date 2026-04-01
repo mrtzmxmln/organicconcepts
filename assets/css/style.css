@@ -534,8 +534,17 @@ a {
   padding-bottom: 50px;
 }
 
+.agb a {
+  color: inherit;
+}
+
 .privacy {
   padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.privacy a {
+  color: inherit
 }
 
 .partnerTools {
