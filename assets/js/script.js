@@ -36,7 +36,7 @@ function sendMail() {
 }
 
 function openCal() {
-  window.open("https://cal.com/ocmoritz/kennenlernen", "_blank").focus();
+  window.open("https://cal.eu/ocmoritz/coffee", "_blank").focus();
 }
 
 function openLinkedIn() {
