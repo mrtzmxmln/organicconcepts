@@ -45,6 +45,19 @@ function openLinkedIn() {
     .focus();
 }
 
+function openStatus() {
+  window.open("https://status.organicconcepts.de", "_blank").focus();
+}
+
+function openStripe() {
+  window
+    .open(
+      "https://pay.organicconcepts.de/p/login/28E7sL06b2QR8Zl3gI1VK00",
+      "_blank",
+    )
+    .focus();
+}
+
 function bookProfessional() {
   window
     .open("https://pay.organicconcepts.de/b/28E7sL06b2QR8Zl3gI1VK00", "_blank")
