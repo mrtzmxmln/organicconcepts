@@ -1,0 +1,30 @@
+name: Deploy Website to VPS
+
+# Wann soll die Action ausgeführt werden?
+on:
+  push:
+    branches:
+      - main # Ändere dies in 'master', falls dein Haupt-Branch so heißt
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Den aktuellen Code aus dem GitHub Repository auschecken
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Dateien per SCP auf deinen Server kopieren
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # Was soll kopiert werden? (Hier: alles im Repo außer versteckte Git-Dateien)
+          source: "."
+          # Wohin soll es auf dem Server kopiert werden?
+          target: "/root/organicconcepts.de"
+          # Wichtig, damit nicht nochmal ein "organicconcepts.de" Unterordner erstellt wird
+          strip_components: 1
